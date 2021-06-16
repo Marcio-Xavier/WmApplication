@@ -6,13 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Comprador\Service\" />
-    <Folder Include="Comunicacao\Service\" />
-    <Folder Include="Localizacao\Service\" />
-    <Folder Include="Operacao\Service\" />
-    <Folder Include="Produto\Service\" />
-    <Folder Include="Utilizador\Service\" />
-    <Folder Include="Vendedor\Service\" />
+    <Folder Include="Services\Comprador\Service\" />
+    <Folder Include="Services\Comunicacao\Service\" />
+    <Folder Include="Services\Localizacao\Service\" />
+    <Folder Include="Services\Operacao\Service\" />
+    <Folder Include="Services\Produto\Service\" />
+    <Folder Include="Services\Utilizador\Service\" />
+    <Folder Include="Services\Vendedor\Service\" />
   </ItemGroup>
 
   <ItemGroup>
