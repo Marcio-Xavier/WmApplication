@@ -1,0 +1,11 @@
+wfapplication/App/App.Domain/bin
+wfapplication/App/App.Domain/obj
+wfapplication/App/App.Repository/bin
+wfapplication/App/App.Repository/obj
+wfapplication/App/App.Service/bin
+wfapplication/App/App.Service/obj
+wfapplication/App/App.Utils/bin
+wfapplication/App/App.Utils/obj
+wfapplication/App/App.WFApplication/bin
+wfapplication/App/App.WFApplication/obj
+wfapplication/App/.vs
