@@ -5,4 +5,18 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Comprador\Service\" />
+    <Folder Include="Comunicacao\Service\" />
+    <Folder Include="Localizacao\Service\" />
+    <Folder Include="Operacao\Service\" />
+    <Folder Include="Produto\Service\" />
+    <Folder Include="Utilizador\Service\" />
+    <Folder Include="Vendedor\Service\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Domain\App.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
