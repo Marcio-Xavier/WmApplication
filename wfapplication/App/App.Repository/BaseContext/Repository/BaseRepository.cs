@@ -1,7 +1,7 @@
 ﻿using System.Configuration;
 using System.Data.SqlClient;
 
-namespace App.Repository._baseContext.Repository
+namespace App.Repository.BaseContext.Repository
 {
     public class BaseRepository
     {

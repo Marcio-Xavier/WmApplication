@@ -1,9 +1,7 @@
 ﻿using App.Domain.Models.Comprador;
-using App.Repository._baseContext.IRepository;
+using App.Repository.BaseContext.IRepository;
 
 namespace App.Repository.Repositories.Comprador.IRepository
 {
-    public interface IClienteRepository : ICRUDBaseRepository<Cliente>
-    {
-    }
+    public interface IClienteRepository : ICRUDBaseRepository<Cliente> { }
 }

@@ -1,6 +1,6 @@
-﻿using App.Repository._baseContext.Repository;
+﻿using App.Repository.BaseContext.Repository;
 
-namespace App.Repository._baseContext
+namespace App.Repository.BaseContext
 {
     public class WmModasBaseRepository<T> : CRUDBaseRepository<T> where T : class { }
 }

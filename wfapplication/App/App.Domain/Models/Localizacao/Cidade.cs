@@ -1,6 +1,6 @@
 ﻿using App.Domain.Base;
-using App.Domain.Models.Cliente;
-using App.Domain.Models.Fornecedor;
+using App.Domain.Models.Comprador;
+using App.Domain.Models.Vendedor;
 using Dapper.Contrib.Extensions;
 using System.Collections.Generic;
 

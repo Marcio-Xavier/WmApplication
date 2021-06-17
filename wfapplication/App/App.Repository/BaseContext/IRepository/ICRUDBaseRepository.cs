@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace App.Repository._baseContext.IRepository
+namespace App.Repository.BaseContext.IRepository
 {
     public interface ICRUDBaseRepository<T> where T : class
     {
