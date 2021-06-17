@@ -1,4 +1,4 @@
-﻿using App.Service.Services.Comprador.IService;
+﻿using App.Service.Services.Clientes.IService;
 using System;
 using System.Windows.Forms;
 

@@ -8,12 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Comunicacao\Service\" />
-    <Folder Include="Services\Localizacao\Service\" />
-    <Folder Include="Services\Operacao\Service\" />
-    <Folder Include="Services\Produto\Service\" />
-    <Folder Include="Services\Utilizador\Service\" />
-    <Folder Include="Services\Vendedor\Service\" />
+    <Folder Include="Services\Contatos\Service\" />
+    <Folder Include="Services\Enderecos\Service\" />
+    <Folder Include="Services\Operacoes\Service\" />
+    <Folder Include="Services\Itens\Service\" />
+    <Folder Include="Services\Usuarios\Service\" />
+    <Folder Include="Services\Fornecedores\Service\" />
   </ItemGroup>
 
   <ItemGroup>

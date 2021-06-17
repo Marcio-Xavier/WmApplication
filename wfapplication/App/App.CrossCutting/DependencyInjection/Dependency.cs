@@ -1,9 +1,9 @@
 ﻿using App.Repository.BaseContext.IRepository;
 using App.Repository.BaseContext.Repository;
-using App.Repository.Repositories.Comprador.IRepository;
-using App.Repository.Repositories.Comprador.Repository;
-using App.Service.Services.Comprador.IService;
-using App.Service.Services.Comprador.Service;
+using App.Repository.Repositories.Clientes.IRepository;
+using App.Repository.Repositories.Clientes.Repository;
+using App.Service.Services.Clientes.IService;
+using App.Service.Services.Clientes.Service;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace App.CrossCutting.DependencyInjection
