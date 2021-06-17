@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App.Repository.BaseContext.Repository
 {
-    public abstract class CRUDBaseRepository<T> : BaseRepository, ICRUDBaseRepository<T> where T : BaseModel
+    public class CRUDBaseRepository<T> : BaseRepository, ICRUDBaseRepository<T> where T : BaseModel
     {
         public async Task<T> Get(uint Id)
         {

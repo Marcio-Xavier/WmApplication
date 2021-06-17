@@ -33,7 +33,7 @@ namespace App.WFApplication
         private static void ConfigureServices(ServiceCollection services)
         {
             services.ConfigureServices();
-            //services.ConfigureRepositories();
+            services.ConfigureRepositories();
 
             // Form principal deve ser um singleton
             services.AddSingleton(typeof(Main));

@@ -16,7 +16,7 @@ namespace App.CrossCutting.DependencyInjection
         }
 
         public static void ConfigureRepositories(this IServiceCollection serviceCollection)
-        {
+        { 
             serviceCollection.AddScoped<IClienteRepository, ClienteRepository>();
             serviceCollection.AddScoped(typeof(ICRUDBaseRepository<>), typeof(CRUDBaseRepository<>));
         }

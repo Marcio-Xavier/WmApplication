@@ -1,4 +1,5 @@
 ﻿using App.Service.Services.Comprador.IService;
+using System;
 using System.Windows.Forms;
 
 namespace App.WFApplication
@@ -9,15 +10,22 @@ namespace App.WFApplication
 
         public Main(IClienteService clienteService)
         {
-            _clienteService = clienteService;
             InitializeComponent();
-
+            
+            _clienteService = clienteService;
             _teste();
         }
 
         private void _teste()
         {
-            var teste = _clienteService.Get();
+            try
+            {
+                var teste = _clienteService.Get();
+            }
+            catch (Exception)
+            {
+                Close();
+            }
         }
     }
 }
