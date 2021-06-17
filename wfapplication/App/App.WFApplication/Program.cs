@@ -21,10 +21,10 @@ namespace App.WFApplication
 
             var services = new ServiceCollection();
 
-            // Add service registration
+            // Registrar os serviços
             ConfigureServices(services);
 
-            // Build serviceprovider object
+            // Construir o objeto serviceprovider
             var serviceProvider = services.BuildServiceProvider();
 
             Application.Run((Form)serviceProvider.GetService(typeof(Main)));

@@ -1,4 +1,5 @@
 ﻿using App.Domain.Models.Comprador;
+using App.Repository.Repositories.Comprador.IRepository;
 using App.Service.Services.Comprador.IService;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,6 +8,13 @@ namespace App.Service.Services.Comprador.Service
 {
     public class ClienteService : IClienteService
     {
+        private IClienteRepository _clienteRepository;
+
+        public ClienteService(IClienteRepository clienteRepository)
+        {
+            _clienteRepository = clienteRepository;
+        }
+
         public async Task<bool> Delete(uint Id)
         {
             return false;
@@ -14,8 +22,7 @@ namespace App.Service.Services.Comprador.Service
 
         public async Task<IEnumerable<Cliente>> Get()
         {
-            var retorno = new List<Cliente> { };
-            return retorno;
+            return await _clienteRepository.Get();
         }
 
         public async Task<Cliente> Get(uint Id)
