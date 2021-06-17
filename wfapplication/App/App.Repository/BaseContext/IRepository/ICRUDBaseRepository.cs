@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using App.Domain.Base;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace App.Repository.BaseContext.IRepository
 {
-    public interface ICRUDBaseRepository<T> where T : class
+    public interface ICRUDBaseRepository<T> where T : BaseModel
     {
         Task<T> Get(uint Id);
 

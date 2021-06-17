@@ -1,13 +1,14 @@
+using App.CrossCutting.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App.WFApplication
 {
     static class Program
     {
+        public static IServiceProvider serviceProvider { get; set; }
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -17,7 +18,28 @@ namespace App.WFApplication
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            var services = new ServiceCollection();
+
+            // Add service registration
+            ConfigureServices(services);
+
+            // Build serviceprovider object
+            var serviceProvider = services.BuildServiceProvider();
+
+            Application.Run((Form)serviceProvider.GetService(typeof(Main)));
+        }
+
+        private static void ConfigureServices(ServiceCollection services)
+        {
+            services.ConfigureServices();
+            //services.ConfigureRepositories();
+
+            // Form principal deve ser um singleton
+            services.AddSingleton(typeof(Main));
+
+            // Demais forms devem ser transient
+            //services.AddTransient(typeof(OthersForms));
         }
     }
 }

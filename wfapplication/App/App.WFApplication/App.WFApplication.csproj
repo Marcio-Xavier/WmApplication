@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\App.CrossCutting\App.CrossCutting.csproj" />
+  </ItemGroup>
+
 </Project>

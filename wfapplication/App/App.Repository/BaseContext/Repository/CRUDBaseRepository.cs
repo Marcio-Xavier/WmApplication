@@ -1,11 +1,12 @@
-﻿using App.Repository.BaseContext.IRepository;
+﻿using App.Domain.Base;
+using App.Repository.BaseContext.IRepository;
 using Dapper.Contrib.Extensions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace App.Repository.BaseContext.Repository
 {
-    public abstract class CRUDBaseRepository<T> : BaseRepository, ICRUDBaseRepository<T> where T : class
+    public abstract class CRUDBaseRepository<T> : BaseRepository, ICRUDBaseRepository<T> where T : BaseModel
     {
         public async Task<T> Get(uint Id)
         {

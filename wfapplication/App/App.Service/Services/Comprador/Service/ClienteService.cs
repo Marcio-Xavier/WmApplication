@@ -14,7 +14,8 @@ namespace App.Service.Services.Comprador.Service
 
         public async Task<IEnumerable<Cliente>> Get()
         {
-            return null;
+            var retorno = new List<Cliente> { };
+            return retorno;
         }
 
         public async Task<Cliente> Get(uint Id)
