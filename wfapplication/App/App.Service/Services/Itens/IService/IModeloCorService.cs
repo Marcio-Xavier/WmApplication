@@ -6,13 +6,13 @@ namespace App.Service.Services.Itens.IService
 {
     public interface IModeloCorService
     {
-        Task<IEnumerable<ModeloCor>> Get();
+        Task<IEnumerable<ItemCor>> Get();
 
-        Task<ModeloCor> Get(uint Id);
+        Task<ItemCor> Get(uint Id);
 
-        Task<uint> Insert(ModeloCor ModeloCor);
+        Task<uint> Insert(ItemCor ModeloCor);
 
-        Task<bool> Update(ModeloCor ModeloCor);
+        Task<bool> Update(ItemCor ModeloCor);
 
         Task<bool> Delete(uint Id);
     }

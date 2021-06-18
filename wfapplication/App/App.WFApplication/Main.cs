@@ -11,7 +11,7 @@ namespace App.WFApplication
         public Main(IClienteService clienteService)
         {
             InitializeComponent();
-            
+
             _clienteService = clienteService;
             _teste();
         }

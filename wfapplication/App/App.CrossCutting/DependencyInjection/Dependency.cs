@@ -4,6 +4,7 @@ using App.Repository.Repositories.Clientes.IRepository;
 using App.Repository.Repositories.Clientes.Repository;
 using App.Service.Services.Clientes.IService;
 using App.Service.Services.Clientes.Service;
+using App.Service.Services.Enderecos.IService;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace App.CrossCutting.DependencyInjection

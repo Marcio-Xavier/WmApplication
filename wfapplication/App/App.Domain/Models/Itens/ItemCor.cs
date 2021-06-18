@@ -4,11 +4,9 @@ using System.Collections.Generic;
 
 namespace App.Domain.Models.Itens
 {
-    [Table("ModeloCor")]
-    public class ModeloCor : BaseModel
+    [Table("ItemCor")]
+    public class ItemCor : BaseModel
     {
         public string Descricao { get; set; }
-
-        public IEnumerable<ItemModelo> ItemModelos { get; set; }
     }
 }

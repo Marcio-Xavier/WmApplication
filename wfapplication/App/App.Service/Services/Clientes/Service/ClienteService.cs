@@ -1,6 +1,7 @@
 ﻿using App.Domain.Models.Clientes;
 using App.Repository.Repositories.Clientes.IRepository;
 using App.Service.Services.Clientes.IService;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -22,7 +23,14 @@ namespace App.Service.Services.Clientes.Service
 
         public async Task<IEnumerable<Cliente>> Get()
         {
-            return await _clienteRepository.Get();
+            try
+            {
+                return await _clienteRepository.Get();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<Cliente> Get(uint Id)

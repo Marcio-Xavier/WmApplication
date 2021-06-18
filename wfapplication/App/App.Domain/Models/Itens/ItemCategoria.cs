@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace App.Domain.Models.Itens
 {
-    [Table("Item")]
+    [Table("ItemCategoria")]
     public class ItemCategoria : BaseModel
     {   
         public string Descricao { get; set; }

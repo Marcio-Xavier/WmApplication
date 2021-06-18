@@ -14,8 +14,6 @@ namespace App.Domain.Models.Operacoes
 
         public double Desconto { get; set; }
 
-        public bool Brinde { get; set; }
-
         public string Observacao { get; set; }
 
         public uint CompraId { get; set; }
@@ -26,7 +24,7 @@ namespace App.Domain.Models.Operacoes
 
         public uint OperacaoTipoId { get; set; } /// Compra; Venda
 
-        public uint ItemOperacaoTipoId { get; set; } /// Compra/Venda; Frete
+        public uint ItemOperacaoTipoId { get; set; } /// Compra/Venda; Brinde; Frete
 
         public Compra Compra { get; set; }
 

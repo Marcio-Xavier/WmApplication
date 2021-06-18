@@ -6,13 +6,13 @@ namespace App.Service.Services.Enderecos.IService
 {
     public interface ILogradouroTipo
     {
-        Task<IEnumerable<LogradouroTipo>> Get();
+        Task<IEnumerable<Logradouro>> Get();
 
-        Task<LogradouroTipo> Get(uint Id);
+        Task<Logradouro> Get(uint Id);
 
-        Task<uint> Insert(LogradouroTipo LogradouroTipo);
+        Task<uint> Insert(Logradouro LogradouroTipo);
 
-        Task<bool> Update(LogradouroTipo LogradouroTipo);
+        Task<bool> Update(Logradouro LogradouroTipo);
 
         Task<bool> Delete(uint Id);
     }

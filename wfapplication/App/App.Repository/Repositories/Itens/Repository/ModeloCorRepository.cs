@@ -4,5 +4,5 @@ using App.Repository.Repositories.Itens.IRepository;
 
 namespace App.Repository.Repositories.Itens.Repository
 {
-    public class ModeloCorRepository : CRUDBaseRepository<ModeloCor>, IModeloCorRepository { }
+    public class ModeloCorRepository : CRUDBaseRepository<ItemCor>, IModeloCorRepository { }
 }

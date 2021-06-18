@@ -22,7 +22,7 @@ namespace App.Domain.Models.Enderecos
         
         public uint CidadeId { get; set; }
 
-        public LogradouroTipo Logradouro { get; set; }
+        public Logradouro Logradouro { get; set; }
 
         public Cidade Cidade { get; set; }
     }

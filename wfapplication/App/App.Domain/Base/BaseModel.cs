@@ -12,6 +12,7 @@ namespace App.Domain.Base
         [Computed]
         public DateTime DataRegistro { get; }
 
+        [Write(false)]
         public uint StatusRegistroId { get; set; }
     }
 }

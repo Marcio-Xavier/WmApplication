@@ -4,5 +4,5 @@ using App.Repository.Repositories.Enderecos.IRepository;
 
 namespace App.Repository.Repositories.Enderecos.Repository
 {
-    public class LogradouroTipoRepository : CRUDBaseRepository<LogradouroTipo>, ILogradouroTipoRepository { }
+    public class LogradouroTipoRepository : CRUDBaseRepository<Logradouro>, ILogradouroTipoRepository { }
 }

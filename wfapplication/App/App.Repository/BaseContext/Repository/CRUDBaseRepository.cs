@@ -1,6 +1,7 @@
 ﻿using App.Domain.Base;
 using App.Repository.BaseContext.IRepository;
 using Dapper.Contrib.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -15,7 +16,14 @@ namespace App.Repository.BaseContext.Repository
 
         public async Task<IEnumerable<T>> Get()
         {
-            return await _conn.GetAllAsync<T>();
+            try
+            {
+                return await _conn.GetAllAsync<T>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<int> Insert(T Objeto)

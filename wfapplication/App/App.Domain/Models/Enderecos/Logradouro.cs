@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 namespace App.Domain.Models.Enderecos
 {
-    [Table("LogradouroTipo")]
-    public class LogradouroTipo : BaseModel
+    [Table("Logradouro")]
+    public class Logradouro : BaseModel
     {
         public string Descricao { get; set; }
 

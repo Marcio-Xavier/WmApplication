@@ -13,17 +13,19 @@ namespace App.Domain.Models.Itens
         public uint Estoque { get; set; }
 
         public double ValorUnitario { get; set; }
+        
+        public string Imagem { get; set; }
 
         public uint ItemCategoriaId { get; set; }
 
         public uint ItemModeloId { get; set; }
 
         public uint ItemCorId { get; set; }
-        
-        public string Imagem { get; set; }
 
         public ItemCategoria ItemCategoria { get; set; }
 
         public ItemModelo ItemModelo { get; set; }
+        
+        public ItemCor ItemCor { get; set; }
     }
 }

@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Eums\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 

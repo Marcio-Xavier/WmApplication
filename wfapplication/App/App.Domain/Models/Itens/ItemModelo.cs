@@ -4,14 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace App.Domain.Models.Itens
 {
-    [Table("Item")]
+    [Table("ItemModelo")]
     public class ItemModelo : BaseModel
     {
         public string Descricao { get; set; }
-
-        public uint ModeloCorId { get; set; }
-
-        public ModeloCor ModeloCor { get; set; }
 
         public IEnumerable<Item> Itens { get; set; }
     }
