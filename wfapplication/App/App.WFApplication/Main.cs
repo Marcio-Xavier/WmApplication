@@ -16,11 +16,11 @@ namespace App.WFApplication
             _teste();
         }
 
-        private void _teste()
+        private async void _teste()
         {
             try
             {
-                var teste = _clienteService.Get();
+                var teste = await _clienteService.Get();
             }
             catch (Exception)
             {
