@@ -4,6 +4,13 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <Authors>Márcio José Xavier Júnior</Authors>
+    <Company>Wm Modas</Company>
+    <Product>Wm Modas System</Product>
+    <Description>Sistema para controle de compra e venda da loja Wm Moda Masculina</Description>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <Copyright>Direitos reservados</Copyright>
+    <Version>1.0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

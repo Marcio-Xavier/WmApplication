@@ -72,14 +72,15 @@ namespace App.WFApplication
             // 
             // lblVersao
             // 
+            this.lblVersao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersao.AutoSize = true;
             this.lblVersao.BackColor = System.Drawing.Color.Transparent;
             this.lblVersao.ForeColor = System.Drawing.Color.White;
-            this.lblVersao.Location = new System.Drawing.Point(126, 745);
+            this.lblVersao.Location = new System.Drawing.Point(117, 745);
             this.lblVersao.Name = "lblVersao";
-            this.lblVersao.Size = new System.Drawing.Size(71, 15);
+            this.lblVersao.Size = new System.Drawing.Size(77, 15);
             this.lblVersao.TabIndex = 7;
-            this.lblVersao.Text = "Versão 9.999";
+            this.lblVersao.Text = "Versão 0.0.0.0";
             // 
             // btnSobre
             // 
@@ -94,6 +95,7 @@ namespace App.WFApplication
             this.btnSobre.TabIndex = 7;
             this.btnSobre.Text = "?";
             this.btnSobre.UseVisualStyleBackColor = true;
+            this.btnSobre.Click += new System.EventHandler(this.btnSobre_Click);
             // 
             // pnlMenuAtivo
             // 
@@ -309,6 +311,7 @@ namespace App.WFApplication
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -1,4 +1,5 @@
 using App.CrossCutting.DependencyInjection;
+using App.WFApplication.Forms.About;
 using App.WFApplication.Forms.UserControls.Clientes;
 using App.WFApplication.Forms.UserControls.Fornecedores;
 using App.WFApplication.Forms.UserControls.Itens;
@@ -47,6 +48,7 @@ namespace App.WFApplication
             Services.AddTransient(typeof(ucFornecedores));
             Services.AddTransient(typeof(ucItens));
             Services.AddTransient(typeof(ucOperacoes));
+            Services.AddTransient(typeof(About));
         }
     }
 }

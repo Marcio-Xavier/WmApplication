@@ -1,18 +1,15 @@
-﻿using App.Domain.Eums;
-using App.Repository.BaseContext.IRepository;
-using App.Service.Services.Clientes.IService;
-using App.Utils.Constants;
+﻿using App.WFApplication.Forms.About;
 using System;
-using System.Collections.Generic;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace App.WFApplication
 {
     public partial class Main : Form
     {
-        private IClienteService _clienteService;
+        private About _about;
 
-        public Main(IClienteService clienteService)
+        public Main(About about)
         {
             InitializeComponent();
 
@@ -20,9 +17,7 @@ namespace App.WFApplication
 
             HideUserControls();
 
-            _clienteService = clienteService;
-            _teste();
-
+            _about = about;
         }
 
         #region Eventos
@@ -82,6 +77,18 @@ namespace App.WFApplication
             }
         }
 
+        private void btnSobre_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _about.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnInstagram_Click(object sender, EventArgs e)
         {
 
@@ -106,7 +113,7 @@ namespace App.WFApplication
         #region Métodos
         private void SetInfoVersao()
         {
-            lblVersao.Text = "Versão" + AppInfo.Versao;
+            lblVersao.Text = "Versão " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
         private void HideUserControls()
@@ -123,18 +130,6 @@ namespace App.WFApplication
             pnlMenuAtivo.Height = button.Height;
             pnlMenuAtivo.Top = button.Top;
             pnlMenuAtivo.Visible = true;
-        }
-
-        private async void _teste()
-        {
-            try
-            {
-                var teste = await _clienteService.Get();
-            }
-            catch (Exception)
-            {
-                Close();
-            }
         }
 
         #endregion
