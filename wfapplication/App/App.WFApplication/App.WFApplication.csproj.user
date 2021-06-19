@@ -4,6 +4,9 @@
     <Compile Update="Forms\About\About.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\UserControls\Clientes\ucCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Forms\UserControls\Clientes\ucClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>

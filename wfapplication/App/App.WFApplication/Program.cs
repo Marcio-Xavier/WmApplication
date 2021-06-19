@@ -44,10 +44,11 @@ namespace App.WFApplication
             Services.AddSingleton(typeof(Main));
 
             // Demais forms devem ser transient
-            Services.AddTransient(typeof(ucClientes));
-            Services.AddTransient(typeof(ucFornecedores));
-            Services.AddTransient(typeof(ucItens));
-            Services.AddTransient(typeof(ucOperacoes));
+            Services.AddSingleton(typeof(ucClientes));
+            Services.AddSingleton(typeof(Forms.UserControls.Clientes.ucCadastro));
+            Services.AddSingleton(typeof(ucFornecedores));
+            Services.AddSingleton(typeof(ucItens));
+            Services.AddSingleton(typeof(ucOperacoes));
             Services.AddTransient(typeof(About));
         }
     }

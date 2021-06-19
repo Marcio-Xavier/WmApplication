@@ -39,7 +39,6 @@ namespace App.WFApplication
             this.btnForncedores = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.pnlLogo = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnInstagram = new System.Windows.Forms.Button();
             this.btnParametrizacoes = new System.Windows.Forms.Button();
@@ -49,9 +48,10 @@ namespace App.WFApplication
             this.ucFornecedores = new App.WFApplication.Forms.UserControls.Fornecedores.ucFornecedores();
             this.ucItens = new App.WFApplication.Forms.UserControls.Itens.ucItens();
             this.ucOperacoes = new App.WFApplication.Forms.UserControls.Operacoes.ucOperacoes();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
-            this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -183,15 +183,6 @@ namespace App.WFApplication
             this.pnlTop.Size = new System.Drawing.Size(1256, 10);
             this.pnlTop.TabIndex = 1;
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.pnlLogo.Controls.Add(this.picLogo);
-            this.pnlLogo.Location = new System.Drawing.Point(277, 10);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(114, 103);
-            this.pnlLogo.TabIndex = 2;
-            // 
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
@@ -294,6 +285,15 @@ namespace App.WFApplication
             this.ucOperacoes.TabIndex = 10;
             this.ucOperacoes.Visible = false;
             // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.pnlLogo.Controls.Add(this.picLogo);
+            this.pnlLogo.Location = new System.Drawing.Point(277, 10);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(114, 103);
+            this.pnlLogo.TabIndex = 2;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -317,8 +317,8 @@ namespace App.WFApplication
             this.Text = "Form1";
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
-            this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.pnlLogo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -327,7 +327,6 @@ namespace App.WFApplication
 
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Button btnForncedores;
         private System.Windows.Forms.Button btnClientes;
@@ -344,6 +343,7 @@ namespace App.WFApplication
         private Forms.UserControls.Fornecedores.ucFornecedores ucFornecedores;
         private Forms.UserControls.Itens.ucItens ucItens;
         private Forms.UserControls.Operacoes.ucOperacoes ucOperacoes;
+        private System.Windows.Forms.Panel pnlLogo;
     }
 }
 

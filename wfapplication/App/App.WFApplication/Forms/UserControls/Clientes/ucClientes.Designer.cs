@@ -29,35 +29,78 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnCadastro = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
+            this.pnlSubMenuAtivo = new System.Windows.Forms.Panel();
+            this.ucCadastro = new App.WFApplication.Forms.UserControls.Clientes.ucCadastro();
             this.SuspendLayout();
             // 
-            // lblTitulo
+            // btnCadastro
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.lblTitulo.Location = new System.Drawing.Point(12, 11);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(144, 18);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Cadastro de clientes";
+            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastro.FlatAppearance.BorderSize = 0;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastro.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.btnCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastro.Location = new System.Drawing.Point(3, 16);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(77, 29);
+            this.btnCadastro.TabIndex = 1;
+            this.btnCadastro.Text = "Cadastro";
+            this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.btnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsulta.Location = new System.Drawing.Point(83, 16);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(77, 29);
+            this.btnConsulta.TabIndex = 2;
+            this.btnConsulta.Text = "Consulta";
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
+            // pnlSubMenuAtivo
+            // 
+            this.pnlSubMenuAtivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.pnlSubMenuAtivo.Location = new System.Drawing.Point(3, 0);
+            this.pnlSubMenuAtivo.Name = "pnlSubMenuAtivo";
+            this.pnlSubMenuAtivo.Size = new System.Drawing.Size(77, 10);
+            this.pnlSubMenuAtivo.TabIndex = 3;
+            // 
+            // ucCadastro1
+            // 
+            this.ucCadastro.Location = new System.Drawing.Point(3, 45);
+            this.ucCadastro.Name = "ucCadastro1";
+            this.ucCadastro.Size = new System.Drawing.Size(1250, 609);
+            this.ucCadastro.TabIndex = 4;
             // 
             // ucClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.ucCadastro);
+            this.Controls.Add(this.pnlSubMenuAtivo);
+            this.Controls.Add(this.btnConsulta);
+            this.Controls.Add(this.btnCadastro);
             this.Name = "ucClientes";
             this.Size = new System.Drawing.Size(1256, 657);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnCadastro;
+        private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Panel pnlSubMenuAtivo;
+        private ucCadastro ucCadastro;
     }
 }
