@@ -29,13 +29,266 @@ namespace App.WFApplication
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.lblVersao = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnlMenuAtivo = new System.Windows.Forms.Panel();
+            this.btnOperacoes = new System.Windows.Forms.Button();
+            this.btnItens = new System.Windows.Forms.Button();
+            this.btnForncedores = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnInstagram = new System.Windows.Forms.Button();
+            this.btnParametrizacoes = new System.Windows.Forms.Button();
+            this.btnWhatsapp = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.pnlMenu.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.pnlMenu.Controls.Add(this.lblVersao);
+            this.pnlMenu.Controls.Add(this.button1);
+            this.pnlMenu.Controls.Add(this.pnlMenuAtivo);
+            this.pnlMenu.Controls.Add(this.btnOperacoes);
+            this.pnlMenu.Controls.Add(this.btnItens);
+            this.pnlMenu.Controls.Add(this.btnForncedores);
+            this.pnlMenu.Controls.Add(this.btnClientes);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(200, 776);
+            this.pnlMenu.TabIndex = 0;
+            // 
+            // lblVersao
+            // 
+            this.lblVersao.AutoSize = true;
+            this.lblVersao.BackColor = System.Drawing.Color.Transparent;
+            this.lblVersao.ForeColor = System.Drawing.Color.White;
+            this.lblVersao.Location = new System.Drawing.Point(143, 745);
+            this.lblVersao.Name = "lblVersao";
+            this.lblVersao.Size = new System.Drawing.Size(41, 15);
+            this.lblVersao.TabIndex = 7;
+            this.lblVersao.Text = "Versão";
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(12, 739);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 25);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pnlMenuAtivo
+            // 
+            this.pnlMenuAtivo.BackColor = System.Drawing.Color.White;
+            this.pnlMenuAtivo.Location = new System.Drawing.Point(0, 133);
+            this.pnlMenuAtivo.Name = "pnlMenuAtivo";
+            this.pnlMenuAtivo.Size = new System.Drawing.Size(9, 56);
+            this.pnlMenuAtivo.TabIndex = 3;
+            // 
+            // btnOperacoes
+            // 
+            this.btnOperacoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOperacoes.FlatAppearance.BorderSize = 0;
+            this.btnOperacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOperacoes.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOperacoes.ForeColor = System.Drawing.Color.White;
+            this.btnOperacoes.Image = ((System.Drawing.Image)(resources.GetObject("btnOperacoes.Image")));
+            this.btnOperacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOperacoes.Location = new System.Drawing.Point(12, 309);
+            this.btnOperacoes.Name = "btnOperacoes";
+            this.btnOperacoes.Size = new System.Drawing.Size(188, 56);
+            this.btnOperacoes.TabIndex = 3;
+            this.btnOperacoes.Text = "Compra/Venda";
+            this.btnOperacoes.UseVisualStyleBackColor = true;
+            // 
+            // btnItens
+            // 
+            this.btnItens.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnItens.FlatAppearance.BorderSize = 0;
+            this.btnItens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItens.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnItens.ForeColor = System.Drawing.Color.White;
+            this.btnItens.Image = ((System.Drawing.Image)(resources.GetObject("btnItens.Image")));
+            this.btnItens.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnItens.Location = new System.Drawing.Point(12, 250);
+            this.btnItens.Name = "btnItens";
+            this.btnItens.Size = new System.Drawing.Size(188, 56);
+            this.btnItens.TabIndex = 2;
+            this.btnItens.Text = "Itens";
+            this.btnItens.UseVisualStyleBackColor = true;
+            // 
+            // btnForncedores
+            // 
+            this.btnForncedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnForncedores.FlatAppearance.BorderSize = 0;
+            this.btnForncedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForncedores.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnForncedores.ForeColor = System.Drawing.Color.White;
+            this.btnForncedores.Image = ((System.Drawing.Image)(resources.GetObject("btnForncedores.Image")));
+            this.btnForncedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnForncedores.Location = new System.Drawing.Point(12, 192);
+            this.btnForncedores.Name = "btnForncedores";
+            this.btnForncedores.Size = new System.Drawing.Size(188, 56);
+            this.btnForncedores.TabIndex = 1;
+            this.btnForncedores.Text = "Fornecedores";
+            this.btnForncedores.UseVisualStyleBackColor = true;
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(12, 133);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(188, 56);
+            this.btnClientes.TabIndex = 0;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = true;
+            // 
+            // pnlTop
+            // 
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(200, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(1256, 10);
+            this.pnlTop.TabIndex = 1;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.pnlLogo.Controls.Add(this.picLogo);
+            this.pnlLogo.Location = new System.Drawing.Point(277, 10);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(114, 103);
+            this.pnlLogo.TabIndex = 2;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(7, 6);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(100, 89);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
+            // 
+            // btnInstagram
+            // 
+            this.btnInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInstagram.FlatAppearance.BorderSize = 0;
+            this.btnInstagram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstagram.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInstagram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
+            this.btnInstagram.Location = new System.Drawing.Point(1282, 16);
+            this.btnInstagram.Name = "btnInstagram";
+            this.btnInstagram.Size = new System.Drawing.Size(36, 35);
+            this.btnInstagram.TabIndex = 3;
+            this.btnInstagram.UseVisualStyleBackColor = true;
+            // 
+            // btnParametrizacoes
+            // 
+            this.btnParametrizacoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnParametrizacoes.FlatAppearance.BorderSize = 0;
+            this.btnParametrizacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParametrizacoes.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnParametrizacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.btnParametrizacoes.Image = ((System.Drawing.Image)(resources.GetObject("btnParametrizacoes.Image")));
+            this.btnParametrizacoes.Location = new System.Drawing.Point(1366, 16);
+            this.btnParametrizacoes.Name = "btnParametrizacoes";
+            this.btnParametrizacoes.Size = new System.Drawing.Size(36, 35);
+            this.btnParametrizacoes.TabIndex = 4;
+            this.btnParametrizacoes.UseVisualStyleBackColor = true;
+            // 
+            // btnWhatsapp
+            // 
+            this.btnWhatsapp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWhatsapp.FlatAppearance.BorderSize = 0;
+            this.btnWhatsapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWhatsapp.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnWhatsapp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.btnWhatsapp.Image = ((System.Drawing.Image)(resources.GetObject("btnWhatsapp.Image")));
+            this.btnWhatsapp.Location = new System.Drawing.Point(1324, 16);
+            this.btnWhatsapp.Name = "btnWhatsapp";
+            this.btnWhatsapp.Size = new System.Drawing.Size(36, 35);
+            this.btnWhatsapp.TabIndex = 5;
+            this.btnWhatsapp.UseVisualStyleBackColor = true;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFechar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.Location = new System.Drawing.Point(1408, 16);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(36, 35);
+            this.btnFechar.TabIndex = 6;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // Main
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1456, 776);
+            this.Controls.Add(this.btnFechar);
+            this.Controls.Add(this.btnWhatsapp);
+            this.Controls.Add(this.btnParametrizacoes);
+            this.Controls.Add(this.btnInstagram);
+            this.Controls.Add(this.pnlLogo);
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pnlMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlMenu.PerformLayout();
+            this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.Panel pnlLogo;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnForncedores;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Panel pnlMenuAtivo;
+        private System.Windows.Forms.Button btnOperacoes;
+        private System.Windows.Forms.Button btnItens;
+        private System.Windows.Forms.Button btnInstagram;
+        private System.Windows.Forms.Label lblVersao;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnParametrizacoes;
+        private System.Windows.Forms.Button btnWhatsapp;
+        private System.Windows.Forms.Button btnFechar;
     }
 }
 

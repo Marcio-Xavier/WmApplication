@@ -18,8 +18,8 @@ namespace App.Repository.BaseContext.IRepository
 
         Task<bool> Update(IEnumerable<T> Objetos);
 
-        Task<bool> Delete(T Objeto);
+        Task<bool> LogicDelete(T Objeto);
 
-        Task<bool> Delete(IEnumerable<T> Objetos);
+        Task<bool> LogicDelete(IEnumerable<T> Objetos);
     }
 }

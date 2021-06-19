@@ -9,11 +9,17 @@ namespace App.Service.Services.Clientes.IService
         Task<IEnumerable<Cliente>> Get();
 
         Task<Cliente> Get(uint Id);
-        
-        Task<uint> Insert(Cliente Cliente);
-        
+
+        Task<int> Insert(Cliente Cliente);
+
+        Task<int> Insert(IEnumerable<Cliente> Clientes);
+
         Task<bool> Update(Cliente Cliente);
         
-        Task<bool> Delete(uint Id);
+        Task<bool> Update(IEnumerable<Cliente> Cliente);
+
+        Task<bool> LogicDelete(Cliente Cliente);
+
+        Task<bool> LogicDelete(IEnumerable<Cliente> Clientes);
     }
 }

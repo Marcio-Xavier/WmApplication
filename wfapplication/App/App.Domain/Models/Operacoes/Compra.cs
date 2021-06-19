@@ -8,7 +8,11 @@ namespace App.Domain.Models.Operacoes
     public class Compra : BaseModel
     {
         public uint FornecedorId { get; set; }
-        
-        public Fornecedor  Fornecedor { get; set; }
+
+        public int TipoPagamentoId { get; set; }
+
+        public Fornecedor Fornecedor { get; set; }
+
+        public TipoPagamento TipoPagamento { get; set; }
     }
 }

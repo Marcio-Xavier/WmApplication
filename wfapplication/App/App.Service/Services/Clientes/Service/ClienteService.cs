@@ -16,11 +16,7 @@ namespace App.Service.Services.Clientes.Service
             _clienteRepository = clienteRepository;
         }
 
-        public async Task<bool> Delete(uint Id)
-        {
-            return false;
-        }
-
+        #region Métodos CRUD
         public async Task<IEnumerable<Cliente>> Get()
         {
             try
@@ -35,17 +31,87 @@ namespace App.Service.Services.Clientes.Service
 
         public async Task<Cliente> Get(uint Id)
         {
-            return null;
+            try
+            {
+                return await _clienteRepository.Get(Id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
-        public async Task<uint> Insert(Cliente Cliente)
+        public async Task<int> Insert(Cliente Cliente)
         {
-            return 0;
+            try
+            {
+                return await _clienteRepository.Insert(Cliente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<int> Insert(IEnumerable<Cliente> Clientes)
+        {
+            try
+            {
+                return await _clienteRepository.Insert(Clientes);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<bool> Update(Cliente Cliente)
         {
-            return false;
+            try
+            {
+                return await _clienteRepository.Update(Cliente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
+
+        public async Task<bool> Update(IEnumerable<Cliente> Clientes)
+        {
+            try
+            {
+                return await _clienteRepository.Update(Clientes);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<bool> LogicDelete(Cliente Cliente)
+        {
+            try
+            {
+                return await _clienteRepository.LogicDelete(Cliente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<bool> LogicDelete(IEnumerable<Cliente> Clientes)
+        {
+            try
+            {
+                return await _clienteRepository.LogicDelete(Clientes);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        #endregion
     }
 }

@@ -8,7 +8,11 @@ namespace App.Domain.Models.Operacoes
     public class Venda : BaseModel
     {
         public uint ClienteId { get; set; }
+        
+        public int TipoPagamentoId { get; set; }
 
         public Cliente Cliente { get; set; }
+
+        public TipoPagamento TipoPagamento { get; set; }
     }
 }

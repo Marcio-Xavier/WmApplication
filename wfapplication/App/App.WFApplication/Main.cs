@@ -1,4 +1,6 @@
-﻿using App.Service.Services.Clientes.IService;
+﻿using App.Repository.BaseContext.IRepository;
+using App.Service.Services.Clientes.IService;
+using App.Utils.Constants;
 using System;
 using System.Windows.Forms;
 
@@ -12,9 +14,26 @@ namespace App.WFApplication
         {
             InitializeComponent();
 
+            SetInfoVersao();
+            
             _clienteService = clienteService;
             _teste();
         }
+
+        #region Eventos
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+        #region Métodos
+        private void SetInfoVersao()
+        {
+            lblVersao.Text = "Versão" + AppInfo.Versao;
+        }
+        #endregion
+
 
         private async void _teste()
         {

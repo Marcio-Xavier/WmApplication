@@ -1,8 +1,10 @@
 ﻿using App.Domain.Base;
+using App.Domain.Eums;
 using App.Repository.BaseContext.IRepository;
 using Dapper.Contrib.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace App.Repository.BaseContext.Repository
@@ -28,32 +30,76 @@ namespace App.Repository.BaseContext.Repository
 
         public async Task<int> Insert(T Objeto)
         {
-            return await _conn.InsertAsync(Objeto);
+            try
+            {
+                return await _conn.InsertAsync(Objeto);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<int> Insert(IEnumerable<T> Objetos)
         {
-            return await _conn.InsertAsync(Objetos);
+            try
+            {
+                return await _conn.InsertAsync(Objetos);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<bool> Update(T Objeto)
         {
-            return await _conn.UpdateAsync(Objeto);
+            try
+            {
+                return await _conn.UpdateAsync(Objeto);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<bool> Update(IEnumerable<T> Objetos)
         {
-            return await _conn.UpdateAsync(Objetos);
+            try
+            {
+                return await _conn.UpdateAsync(Objetos);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
-        public async Task<bool> Delete(T Objeto)
+        public async Task<bool> LogicDelete(T Objeto)
         {
-            return await _conn.DeleteAsync(Objeto);
+            try
+            {
+                Objeto.StatusRegistroId = (int)StatusRegistro.Excluido;
+                return await _conn.UpdateAsync(Objeto);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
-        public async Task<bool> Delete(IEnumerable<T> Objetos)
+        public async Task<bool> LogicDelete(IEnumerable<T> Objetos)
         {
-            return await _conn.DeleteAsync(Objetos);
+            try
+            {
+                Objetos.ToList().ForEach(x => x.StatusRegistroId = (int)StatusRegistro.Excluido);
+                return await _conn.UpdateAsync(Objetos);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }
