@@ -21,6 +21,41 @@ namespace App.WFApplication
         }
 
         #region Eventos
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnForncedores_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnItens_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOperacoes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInstagram_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnWhatsapp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnParametrizacoes_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
@@ -32,9 +67,6 @@ namespace App.WFApplication
         {
             lblVersao.Text = "Versão" + AppInfo.Versao;
         }
-        #endregion
-
-
         private async void _teste()
         {
             try
@@ -46,5 +78,7 @@ namespace App.WFApplication
                 Close();
             }
         }
+
+        #endregion
     }
 }

@@ -71,11 +71,11 @@ namespace App.WFApplication
             this.lblVersao.AutoSize = true;
             this.lblVersao.BackColor = System.Drawing.Color.Transparent;
             this.lblVersao.ForeColor = System.Drawing.Color.White;
-            this.lblVersao.Location = new System.Drawing.Point(143, 745);
+            this.lblVersao.Location = new System.Drawing.Point(126, 745);
             this.lblVersao.Name = "lblVersao";
-            this.lblVersao.Size = new System.Drawing.Size(41, 15);
+            this.lblVersao.Size = new System.Drawing.Size(71, 15);
             this.lblVersao.TabIndex = 7;
-            this.lblVersao.Text = "Versão";
+            this.lblVersao.Text = "Versão 9.999";
             // 
             // button1
             // 
@@ -114,6 +114,7 @@ namespace App.WFApplication
             this.btnOperacoes.TabIndex = 3;
             this.btnOperacoes.Text = "Compra/Venda";
             this.btnOperacoes.UseVisualStyleBackColor = true;
+            this.btnOperacoes.Click += new System.EventHandler(this.btnOperacoes_Click);
             // 
             // btnItens
             // 
@@ -130,6 +131,7 @@ namespace App.WFApplication
             this.btnItens.TabIndex = 2;
             this.btnItens.Text = "Itens";
             this.btnItens.UseVisualStyleBackColor = true;
+            this.btnItens.Click += new System.EventHandler(this.btnItens_Click);
             // 
             // btnForncedores
             // 
@@ -146,6 +148,7 @@ namespace App.WFApplication
             this.btnForncedores.TabIndex = 1;
             this.btnForncedores.Text = "Fornecedores";
             this.btnForncedores.UseVisualStyleBackColor = true;
+            this.btnForncedores.Click += new System.EventHandler(this.btnForncedores_Click);
             // 
             // btnClientes
             // 
@@ -162,6 +165,7 @@ namespace App.WFApplication
             this.btnClientes.TabIndex = 0;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // pnlTop
             // 
@@ -204,6 +208,7 @@ namespace App.WFApplication
             this.btnInstagram.Size = new System.Drawing.Size(36, 35);
             this.btnInstagram.TabIndex = 3;
             this.btnInstagram.UseVisualStyleBackColor = true;
+            this.btnInstagram.Click += new System.EventHandler(this.btnInstagram_Click);
             // 
             // btnParametrizacoes
             // 
@@ -218,6 +223,7 @@ namespace App.WFApplication
             this.btnParametrizacoes.Size = new System.Drawing.Size(36, 35);
             this.btnParametrizacoes.TabIndex = 4;
             this.btnParametrizacoes.UseVisualStyleBackColor = true;
+            this.btnParametrizacoes.Click += new System.EventHandler(this.btnParametrizacoes_Click);
             // 
             // btnWhatsapp
             // 
@@ -232,6 +238,7 @@ namespace App.WFApplication
             this.btnWhatsapp.Size = new System.Drawing.Size(36, 35);
             this.btnWhatsapp.TabIndex = 5;
             this.btnWhatsapp.UseVisualStyleBackColor = true;
+            this.btnWhatsapp.Click += new System.EventHandler(this.btnWhatsapp_Click);
             // 
             // btnFechar
             // 

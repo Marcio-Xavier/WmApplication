@@ -12,10 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="assets\img\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Compile Update="Forms\UserControls\Fornecedores\ucFornecedores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\UserControls\Itens\ucItens.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Forms\UserControls\Operacoes\ucOperacoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
