@@ -1,7 +1,9 @@
-﻿using App.Repository.BaseContext.IRepository;
+﻿using App.Domain.Eums;
+using App.Repository.BaseContext.IRepository;
 using App.Service.Services.Clientes.IService;
 using App.Utils.Constants;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace App.WFApplication
@@ -15,30 +17,69 @@ namespace App.WFApplication
             InitializeComponent();
 
             SetInfoVersao();
-            
+
+            HideUserControls();
+
             _clienteService = clienteService;
             _teste();
+
         }
 
         #region Eventos
         private void btnClientes_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                HideUserControls();
+                ucClientes.Visible = true;
+                SetMenuAtivo((Button)sender);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnForncedores_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                HideUserControls();
+                ucFornecedores.Visible = true;
+                SetMenuAtivo((Button)sender);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnItens_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                HideUserControls();
+                ucItens.Visible = true;
+                SetMenuAtivo((Button)sender);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnOperacoes_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                HideUserControls();
+                ucOperacoes.Visible = true;
+                SetMenuAtivo((Button)sender);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnInstagram_Click(object sender, EventArgs e)
@@ -67,6 +108,23 @@ namespace App.WFApplication
         {
             lblVersao.Text = "Versão" + AppInfo.Versao;
         }
+
+        private void HideUserControls()
+        {
+            ucClientes.Visible =
+            ucFornecedores.Visible =
+            ucItens.Visible =
+            ucOperacoes.Visible =
+            pnlMenuAtivo.Visible = false;
+        }
+
+        private void SetMenuAtivo(Button button)
+        {
+            pnlMenuAtivo.Height = button.Height;
+            pnlMenuAtivo.Top = button.Top;
+            pnlMenuAtivo.Visible = true;
+        }
+
         private async void _teste()
         {
             try

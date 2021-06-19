@@ -10,15 +10,15 @@ namespace App.CrossCutting.DependencyInjection
 {
     public static class Dependency
     {
-        public static void ConfigureServices(this IServiceCollection serviceCollection)
+        public static void ConfigureServices(this IServiceCollection Services)
         {
-            serviceCollection.AddTransient<IClienteService, ClienteService>();
+            Services.AddTransient<IClienteService, ClienteService>();
         }
 
-        public static void ConfigureRepositories(this IServiceCollection serviceCollection)
+        public static void ConfigureRepositories(this IServiceCollection Services)
         { 
-            serviceCollection.AddScoped(typeof(ICRUDBaseRepository<>), typeof(CRUDBaseRepository<>));
-            serviceCollection.AddScoped<IClienteRepository, ClienteRepository>();
+            Services.AddScoped(typeof(ICRUDBaseRepository<>), typeof(CRUDBaseRepository<>));
+            Services.AddScoped<IClienteRepository, ClienteRepository>();
         }
     }
 }

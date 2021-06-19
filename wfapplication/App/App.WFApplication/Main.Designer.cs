@@ -32,7 +32,7 @@ namespace App.WFApplication
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblVersao = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSobre = new System.Windows.Forms.Button();
             this.pnlMenuAtivo = new System.Windows.Forms.Panel();
             this.btnOperacoes = new System.Windows.Forms.Button();
             this.btnItens = new System.Windows.Forms.Button();
@@ -45,6 +45,10 @@ namespace App.WFApplication
             this.btnParametrizacoes = new System.Windows.Forms.Button();
             this.btnWhatsapp = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.ucClientes = new App.WFApplication.Forms.UserControls.Clientes.ucClientes();
+            this.ucFornecedores = new App.WFApplication.Forms.UserControls.Fornecedores.ucFornecedores();
+            this.ucItens = new App.WFApplication.Forms.UserControls.Itens.ucItens();
+            this.ucOperacoes = new App.WFApplication.Forms.UserControls.Operacoes.ucOperacoes();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -54,7 +58,7 @@ namespace App.WFApplication
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
             this.pnlMenu.Controls.Add(this.lblVersao);
-            this.pnlMenu.Controls.Add(this.button1);
+            this.pnlMenu.Controls.Add(this.btnSobre);
             this.pnlMenu.Controls.Add(this.pnlMenuAtivo);
             this.pnlMenu.Controls.Add(this.btnOperacoes);
             this.pnlMenu.Controls.Add(this.btnItens);
@@ -77,27 +81,28 @@ namespace App.WFApplication
             this.lblVersao.TabIndex = 7;
             this.lblVersao.Text = "Versão 9.999";
             // 
-            // button1
+            // btnSobre
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(12, 739);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 25);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "?";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSobre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSobre.FlatAppearance.BorderSize = 0;
+            this.btnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSobre.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSobre.ForeColor = System.Drawing.Color.White;
+            this.btnSobre.Location = new System.Drawing.Point(12, 739);
+            this.btnSobre.Name = "btnSobre";
+            this.btnSobre.Size = new System.Drawing.Size(28, 25);
+            this.btnSobre.TabIndex = 7;
+            this.btnSobre.Text = "?";
+            this.btnSobre.UseVisualStyleBackColor = true;
             // 
             // pnlMenuAtivo
             // 
             this.pnlMenuAtivo.BackColor = System.Drawing.Color.White;
-            this.pnlMenuAtivo.Location = new System.Drawing.Point(0, 133);
+            this.pnlMenuAtivo.Location = new System.Drawing.Point(0, 120);
             this.pnlMenuAtivo.Name = "pnlMenuAtivo";
             this.pnlMenuAtivo.Size = new System.Drawing.Size(9, 56);
             this.pnlMenuAtivo.TabIndex = 3;
+            this.pnlMenuAtivo.Visible = false;
             // 
             // btnOperacoes
             // 
@@ -108,7 +113,7 @@ namespace App.WFApplication
             this.btnOperacoes.ForeColor = System.Drawing.Color.White;
             this.btnOperacoes.Image = ((System.Drawing.Image)(resources.GetObject("btnOperacoes.Image")));
             this.btnOperacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOperacoes.Location = new System.Drawing.Point(12, 309);
+            this.btnOperacoes.Location = new System.Drawing.Point(12, 296);
             this.btnOperacoes.Name = "btnOperacoes";
             this.btnOperacoes.Size = new System.Drawing.Size(188, 56);
             this.btnOperacoes.TabIndex = 3;
@@ -125,7 +130,7 @@ namespace App.WFApplication
             this.btnItens.ForeColor = System.Drawing.Color.White;
             this.btnItens.Image = ((System.Drawing.Image)(resources.GetObject("btnItens.Image")));
             this.btnItens.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnItens.Location = new System.Drawing.Point(12, 250);
+            this.btnItens.Location = new System.Drawing.Point(12, 237);
             this.btnItens.Name = "btnItens";
             this.btnItens.Size = new System.Drawing.Size(188, 56);
             this.btnItens.TabIndex = 2;
@@ -142,7 +147,7 @@ namespace App.WFApplication
             this.btnForncedores.ForeColor = System.Drawing.Color.White;
             this.btnForncedores.Image = ((System.Drawing.Image)(resources.GetObject("btnForncedores.Image")));
             this.btnForncedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnForncedores.Location = new System.Drawing.Point(12, 192);
+            this.btnForncedores.Location = new System.Drawing.Point(12, 179);
             this.btnForncedores.Name = "btnForncedores";
             this.btnForncedores.Size = new System.Drawing.Size(188, 56);
             this.btnForncedores.TabIndex = 1;
@@ -159,7 +164,7 @@ namespace App.WFApplication
             this.btnClientes.ForeColor = System.Drawing.Color.White;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(12, 133);
+            this.btnClientes.Location = new System.Drawing.Point(12, 120);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(188, 56);
             this.btnClientes.TabIndex = 0;
@@ -255,11 +260,47 @@ namespace App.WFApplication
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // ucClientes
+            // 
+            this.ucClientes.Location = new System.Drawing.Point(200, 119);
+            this.ucClientes.Name = "ucClientes";
+            this.ucClientes.Size = new System.Drawing.Size(1256, 657);
+            this.ucClientes.TabIndex = 7;
+            this.ucClientes.Visible = false;
+            // 
+            // ucFornecedores
+            // 
+            this.ucFornecedores.Location = new System.Drawing.Point(200, 120);
+            this.ucFornecedores.Name = "ucFornecedores";
+            this.ucFornecedores.Size = new System.Drawing.Size(1256, 657);
+            this.ucFornecedores.TabIndex = 8;
+            this.ucFornecedores.Visible = false;
+            // 
+            // ucItens
+            // 
+            this.ucItens.Location = new System.Drawing.Point(200, 120);
+            this.ucItens.Name = "ucItens";
+            this.ucItens.Size = new System.Drawing.Size(1256, 657);
+            this.ucItens.TabIndex = 9;
+            this.ucItens.Visible = false;
+            // 
+            // ucOperacoes
+            // 
+            this.ucOperacoes.Location = new System.Drawing.Point(200, 120);
+            this.ucOperacoes.Name = "ucOperacoes";
+            this.ucOperacoes.Size = new System.Drawing.Size(1256, 657);
+            this.ucOperacoes.TabIndex = 10;
+            this.ucOperacoes.Visible = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1456, 776);
+            this.Controls.Add(this.ucOperacoes);
+            this.Controls.Add(this.ucItens);
+            this.Controls.Add(this.ucFornecedores);
+            this.Controls.Add(this.ucClientes);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnWhatsapp);
             this.Controls.Add(this.btnParametrizacoes);
@@ -292,10 +333,14 @@ namespace App.WFApplication
         private System.Windows.Forms.Button btnItens;
         private System.Windows.Forms.Button btnInstagram;
         private System.Windows.Forms.Label lblVersao;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSobre;
         private System.Windows.Forms.Button btnParametrizacoes;
         private System.Windows.Forms.Button btnWhatsapp;
         private System.Windows.Forms.Button btnFechar;
+        private Forms.UserControls.Clientes.ucClientes ucClientes;
+        private Forms.UserControls.Fornecedores.ucFornecedores ucFornecedores;
+        private Forms.UserControls.Itens.ucItens ucItens;
+        private Forms.UserControls.Operacoes.ucOperacoes ucOperacoes;
     }
 }
 
