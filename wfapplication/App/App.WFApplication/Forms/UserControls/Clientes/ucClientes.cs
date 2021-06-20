@@ -40,7 +40,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             {
                 HideUserControls();
                 SetMenuAtivo((Button)sender);
-                //ucConsulta.Visible = true;
+                ucConsulta.Visible = true;
             }
             catch (Exception ex)
             {
@@ -58,7 +58,8 @@ namespace App.WFApplication.Forms.UserControls.Clientes
 
         private void HideUserControls()
         {
-            ucCadastro.Visible = false;
+            ucCadastro.Visible =
+            ucConsulta.Visible = false;
         }
     }
 }

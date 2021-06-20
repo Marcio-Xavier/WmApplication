@@ -31,15 +31,13 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCadastro));
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblCpf = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
-            this.pnlCadastro = new System.Windows.Forms.Panel();
             this.tlpFormulario = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.pnlCadastro.SuspendLayout();
             this.tlpFormulario.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
             this.SuspendLayout();
@@ -56,27 +54,27 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.txtNome.Size = new System.Drawing.Size(518, 26);
             this.txtNome.TabIndex = 0;
             // 
-            // label1
+            // lblNome
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nome";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.lblNome.Location = new System.Drawing.Point(3, 0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(48, 18);
+            this.lblNome.TabIndex = 2;
+            this.lblNome.Text = "Nome";
             // 
-            // label2
+            // lblCpf
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.label2.Location = new System.Drawing.Point(3, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "CPF";
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.lblCpf.Location = new System.Drawing.Point(3, 32);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(34, 18);
+            this.lblCpf.TabIndex = 3;
+            this.lblCpf.Text = "CPF";
             // 
             // btnSalvar
             // 
@@ -111,15 +109,6 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.txtCpf.Size = new System.Drawing.Size(120, 26);
             this.txtCpf.TabIndex = 5;
             // 
-            // pnlCadastro
-            // 
-            this.pnlCadastro.Controls.Add(this.tlpFormulario);
-            this.pnlCadastro.Controls.Add(this.tlpBotoes);
-            this.pnlCadastro.Location = new System.Drawing.Point(3, 3);
-            this.pnlCadastro.Name = "pnlCadastro";
-            this.pnlCadastro.Size = new System.Drawing.Size(1247, 606);
-            this.pnlCadastro.TabIndex = 6;
-            // 
             // tlpFormulario
             // 
             this.tlpFormulario.ColumnCount = 2;
@@ -127,15 +116,15 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpFormulario.Controls.Add(this.txtCpf, 1, 1);
             this.tlpFormulario.Controls.Add(this.txtNome, 1, 0);
-            this.tlpFormulario.Controls.Add(this.label2, 0, 1);
-            this.tlpFormulario.Controls.Add(this.label1, 0, 0);
+            this.tlpFormulario.Controls.Add(this.lblCpf, 0, 1);
+            this.tlpFormulario.Controls.Add(this.lblNome, 0, 0);
             this.tlpFormulario.Location = new System.Drawing.Point(3, 3);
             this.tlpFormulario.Name = "tlpFormulario";
             this.tlpFormulario.RowCount = 2;
             this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpFormulario.Size = new System.Drawing.Size(1241, 64);
+            this.tlpFormulario.Size = new System.Drawing.Size(1250, 64);
             this.tlpFormulario.TabIndex = 6;
             // 
             // tlpBotoes
@@ -146,7 +135,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.tlpBotoes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBotoes.Controls.Add(this.btnLimpar, 0, 0);
             this.tlpBotoes.Controls.Add(this.btnSalvar, 1, 0);
-            this.tlpBotoes.Location = new System.Drawing.Point(1061, 565);
+            this.tlpBotoes.Location = new System.Drawing.Point(1070, 568);
             this.tlpBotoes.Name = "tlpBotoes";
             this.tlpBotoes.RowCount = 1;
             this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -178,11 +167,11 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pnlCadastro);
+            this.Controls.Add(this.tlpFormulario);
+            this.Controls.Add(this.tlpBotoes);
             this.Name = "ucCadastro";
-            this.Size = new System.Drawing.Size(1250, 609);
+            this.Size = new System.Drawing.Size(1256, 609);
             this.Load += new System.EventHandler(this.ucCadastro_Load);
-            this.pnlCadastro.ResumeLayout(false);
             this.tlpFormulario.ResumeLayout(false);
             this.tlpFormulario.PerformLayout();
             this.tlpBotoes.ResumeLayout(false);
@@ -193,11 +182,10 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         #endregion
 
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblCpf;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.MaskedTextBox txtCpf;
-        private System.Windows.Forms.Panel pnlCadastro;
         private System.Windows.Forms.TableLayoutPanel tlpFormulario;
         private System.Windows.Forms.TableLayoutPanel tlpBotoes;
         private System.Windows.Forms.Button btnLimpar;

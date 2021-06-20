@@ -10,6 +10,9 @@
     <Compile Update="Forms\UserControls\Clientes\ucClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Forms\UserControls\Clientes\ucConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
