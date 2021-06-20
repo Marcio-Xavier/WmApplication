@@ -29,9 +29,10 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucConsulta));
             this.grvClientes = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,13 +40,15 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.DataRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusRegistroId = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tlpFormulario = new System.Windows.Forms.TableLayoutPanel();
+            this.txtDataFim = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataInicio = new System.Windows.Forms.MaskedTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblDataFim = new System.Windows.Forms.Label();
+            this.lblDataInicio = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.lblDtInicio = new System.Windows.Forms.Label();
-            this.dtpDataInicio = new System.Windows.Forms.DateTimePicker();
-            this.dtpDataFim = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grvClientes)).BeginInit();
             this.tlpFormulario.SuspendLayout();
             this.SuspendLayout();
@@ -53,17 +56,18 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // grvClientes
             // 
             this.grvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grvClientes.BackgroundColor = System.Drawing.Color.White;
             this.grvClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grvClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grvClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -71,28 +75,29 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.Cpf,
             this.DataRegistro,
             this.StatusRegistroId});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle5.NullValue = "-";
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grvClientes.DefaultCellStyle = dataGridViewCellStyle5;
-            this.grvClientes.Location = new System.Drawing.Point(79, 342);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle2.NullValue = "-";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvClientes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grvClientes.GridColor = System.Drawing.Color.White;
+            this.grvClientes.Location = new System.Drawing.Point(3, 79);
             this.grvClientes.Name = "grvClientes";
             this.grvClientes.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grvClientes.RowTemplate.Height = 25;
-            this.grvClientes.Size = new System.Drawing.Size(878, 179);
+            this.grvClientes.Size = new System.Drawing.Size(1250, 527);
             this.grvClientes.TabIndex = 0;
             // 
             // Id
@@ -127,20 +132,57 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // 
             // tlpFormulario
             // 
-            this.tlpFormulario.ColumnCount = 2;
+            this.tlpFormulario.ColumnCount = 7;
             this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpFormulario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpFormulario.Controls.Add(this.txtDataFim, 5, 0);
+            this.tlpFormulario.Controls.Add(this.txtDataInicio, 3, 0);
             this.tlpFormulario.Controls.Add(this.txtCpf, 1, 1);
             this.tlpFormulario.Controls.Add(this.txtNome, 1, 0);
+            this.tlpFormulario.Controls.Add(this.lblDataFim, 4, 0);
+            this.tlpFormulario.Controls.Add(this.lblDataInicio, 2, 0);
             this.tlpFormulario.Controls.Add(this.lblCpf, 0, 1);
             this.tlpFormulario.Controls.Add(this.lblNome, 0, 0);
+            this.tlpFormulario.Controls.Add(this.btnPesquisar, 6, 1);
             this.tlpFormulario.Location = new System.Drawing.Point(3, 3);
             this.tlpFormulario.Name = "tlpFormulario";
             this.tlpFormulario.RowCount = 2;
             this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpFormulario.Size = new System.Drawing.Size(1250, 64);
+            this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpFormulario.Size = new System.Drawing.Size(1250, 70);
             this.tlpFormulario.TabIndex = 7;
+            // 
+            // txtDataFim
+            // 
+            this.txtDataFim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtDataFim.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDataFim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.txtDataFim.Location = new System.Drawing.Point(875, 3);
+            this.txtDataFim.Mask = "00/00/0000";
+            this.txtDataFim.Name = "txtDataFim";
+            this.txtDataFim.PromptChar = ' ';
+            this.txtDataFim.Size = new System.Drawing.Size(120, 26);
+            this.txtDataFim.TabIndex = 12;
+            // 
+            // txtDataInicio
+            // 
+            this.txtDataInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtDataInicio.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDataInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.txtDataInicio.Location = new System.Drawing.Point(611, 3);
+            this.txtDataInicio.Mask = "00/00/0000";
+            this.txtDataInicio.Name = "txtDataInicio";
+            this.txtDataInicio.PromptChar = ' ';
+            this.txtDataInicio.Size = new System.Drawing.Size(120, 26);
+            this.txtDataInicio.TabIndex = 11;
             // 
             // txtCpf
             // 
@@ -168,6 +210,28 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.txtNome.Size = new System.Drawing.Size(400, 26);
             this.txtNome.TabIndex = 0;
             // 
+            // lblDataFim
+            // 
+            this.lblDataFim.AutoSize = true;
+            this.lblDataFim.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDataFim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.lblDataFim.Location = new System.Drawing.Point(737, 0);
+            this.lblDataFim.Name = "lblDataFim";
+            this.lblDataFim.Size = new System.Drawing.Size(132, 18);
+            this.lblDataFim.TabIndex = 8;
+            this.lblDataFim.Text = "Data Cadastro Fim";
+            // 
+            // lblDataInicio
+            // 
+            this.lblDataInicio.AutoSize = true;
+            this.lblDataInicio.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDataInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.lblDataInicio.Location = new System.Drawing.Point(463, 0);
+            this.lblDataInicio.Name = "lblDataInicio";
+            this.lblDataInicio.Size = new System.Drawing.Size(142, 18);
+            this.lblDataInicio.TabIndex = 9;
+            this.lblDataInicio.Text = "Data Cadastro Início";
+            // 
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
@@ -190,40 +254,25 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
-            // lblDtInicio
+            // btnPesquisar
             // 
-            this.lblDtInicio.AutoSize = true;
-            this.lblDtInicio.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDtInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.lblDtInicio.Location = new System.Drawing.Point(709, 134);
-            this.lblDtInicio.Name = "lblDtInicio";
-            this.lblDtInicio.Size = new System.Drawing.Size(142, 18);
-            this.lblDtInicio.TabIndex = 8;
-            this.lblDtInicio.Text = "Data Cadastro Início";
-            // 
-            // dtpDataInicio
-            // 
-            this.dtpDataInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtpDataInicio.CalendarFont = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpDataInicio.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.dtpDataInicio.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpDataInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataInicio.Location = new System.Drawing.Point(925, 161);
-            this.dtpDataInicio.Name = "dtpDataInicio";
-            this.dtpDataInicio.Size = new System.Drawing.Size(115, 26);
-            this.dtpDataInicio.TabIndex = 10;
-            // 
-            // dtpDataFim
-            // 
-            this.dtpDataFim.AutoSize = true;
-            this.dtpDataFim.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpDataFim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.dtpDataFim.Location = new System.Drawing.Point(575, 110);
-            this.dtpDataFim.Name = "dtpDataFim";
-            this.dtpDataFim.Size = new System.Drawing.Size(132, 18);
-            this.dtpDataFim.TabIndex = 9;
-            this.dtpDataFim.Text = "Data Cadastro Fim";
+            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(155)))), ((int)(((byte)(207)))));
+            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(1135, 35);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(112, 32);
+            this.btnPesquisar.TabIndex = 8;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // ucConsulta
             // 
@@ -231,16 +280,12 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tlpFormulario);
             this.Controls.Add(this.grvClientes);
-            this.Controls.Add(this.dtpDataFim);
-            this.Controls.Add(this.lblDtInicio);
-            this.Controls.Add(this.dtpDataInicio);
             this.Name = "ucConsulta";
             this.Size = new System.Drawing.Size(1256, 609);
             ((System.ComponentModel.ISupportInitialize)(this.grvClientes)).EndInit();
             this.tlpFormulario.ResumeLayout(false);
             this.tlpFormulario.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -257,8 +302,10 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblCpf;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblDtInicio;
-        private System.Windows.Forms.DateTimePicker dtpDataInicio;
-        private System.Windows.Forms.Label dtpDataFim;
+        private System.Windows.Forms.Label lblDataFim;
+        private System.Windows.Forms.Label lblDataInicio;
+        private System.Windows.Forms.MaskedTextBox txtDataInicio;
+        private System.Windows.Forms.MaskedTextBox txtDataFim;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }
