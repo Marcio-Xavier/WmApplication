@@ -1,4 +1,5 @@
-﻿
+﻿using App.Service.Services.Clientes.IService;
+
 namespace App.WFApplication.Forms.UserControls.Clientes
 {
     partial class ucClientes
@@ -27,13 +28,13 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(IClienteService clienteService)
         {
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.pnlSubMenuAtivo = new System.Windows.Forms.Panel();
             this.ucCadastro = new App.WFApplication.Forms.UserControls.Clientes.ucCadastro();
-            this.ucConsulta = new App.WFApplication.Forms.UserControls.Clientes.ucConsulta();
+            this.ucConsulta = new App.WFApplication.Forms.UserControls.Clientes.ucConsulta(clienteService);
             this.SuspendLayout();
             // 
             // btnCadastro

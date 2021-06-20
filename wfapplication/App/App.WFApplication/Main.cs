@@ -1,4 +1,6 @@
-﻿using App.WFApplication.Forms.About;
+﻿using App.Service.Services.Clientes.IService;
+using App.WFApplication.Forms.About;
+using App.WFApplication.Forms.UserControls.Clientes;
 using System;
 using System.Reflection;
 using System.Windows.Forms;
@@ -8,16 +10,20 @@ namespace App.WFApplication
     public partial class Main : Form
     {
         private About _about;
+        private IClienteService _clienteService;
 
-        public Main(About about)
+        public Main(About about, IClienteService clienteService)
         {
-            InitializeComponent();
+            _clienteService = clienteService;
+
+            InitializeComponent(clienteService);
 
             SetInfoVersao();
 
             HideUserControls();
 
             _about = about;
+
         }
 
         #region Eventos
@@ -91,17 +97,35 @@ namespace App.WFApplication
 
         private void btnInstagram_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnWhatsapp_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnParametrizacoes_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -131,7 +155,6 @@ namespace App.WFApplication
             pnlMenuAtivo.Top = button.Top;
             pnlMenuAtivo.Visible = true;
         }
-
         #endregion
     }
 }

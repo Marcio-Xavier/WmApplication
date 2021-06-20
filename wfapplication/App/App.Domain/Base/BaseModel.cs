@@ -5,14 +5,11 @@ namespace App.Domain.Base
 {
     public abstract class BaseModel
     {
-        [Key]
-        public uint Id { get; }
-
-        [Write(false)]
-        [Computed]
+        [ExplicitKey]
+        public int Id { get; }
+        
         public DateTime DataRegistro { get; }
 
-        [Write(false)]
-        public uint StatusRegistroId { get; set; }
+        public int StatusRegistroId { get; set; }
     }
 }

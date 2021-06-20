@@ -29,6 +29,18 @@ namespace App.Service.Services.Clientes.Service
             }
         }
 
+        public async Task<IEnumerable<Cliente>> GetTeste()
+        {
+            try
+            {
+                return await _clienteRepository.Get();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task<Cliente> Get(uint Id)
         {
             try

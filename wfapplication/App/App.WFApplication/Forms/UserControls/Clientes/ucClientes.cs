@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using App.Service.Services.Clientes.IService;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App.WFApplication.Forms.UserControls.Clientes
 {
     public partial class ucClientes : UserControl
     {
-        public ucClientes()
+        public ucClientes(IClienteService clienteService)
         {
-            InitializeComponent();
+            InitializeComponent(clienteService);
             HideUserControls();
             ucCadastro.Visible = true;
             SetMenuAtivo(btnCadastro);

@@ -102,33 +102,41 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // 
             // Id
             // 
+            this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "# ID";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             // 
             // Nome
             // 
+            this.Nome.DataPropertyName = "Nome";
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
             // 
             // Cpf
             // 
+            this.Cpf.DataPropertyName = "Cpf";
             this.Cpf.HeaderText = "CPF";
             this.Cpf.Name = "Cpf";
             this.Cpf.ReadOnly = true;
             // 
             // DataRegistro
             // 
+            this.DataRegistro.DataPropertyName = "DataRegistro";
             this.DataRegistro.HeaderText = "Data Cadastro";
             this.DataRegistro.Name = "DataRegistro";
             this.DataRegistro.ReadOnly = true;
             // 
             // StatusRegistroId
             // 
+            this.StatusRegistroId.DataPropertyName = "StatusRegistroId";
+            this.StatusRegistroId.FalseValue = "2";
             this.StatusRegistroId.HeaderText = "Ativo?";
             this.StatusRegistroId.Name = "StatusRegistroId";
             this.StatusRegistroId.ReadOnly = true;
+            this.StatusRegistroId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.StatusRegistroId.TrueValue = "1";
             // 
             // tlpFormulario
             // 
@@ -292,11 +300,6 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         #endregion
 
         private System.Windows.Forms.DataGridView grvClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataRegistro;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn StatusRegistroId;
         private System.Windows.Forms.TableLayoutPanel tlpFormulario;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.TextBox txtNome;
@@ -307,5 +310,10 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         private System.Windows.Forms.MaskedTextBox txtDataInicio;
         private System.Windows.Forms.MaskedTextBox txtDataFim;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataRegistro;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn StatusRegistroId;
     }
 }

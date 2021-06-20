@@ -40,15 +40,16 @@ namespace App.WFApplication
             Services.ConfigureServices();
             Services.ConfigureRepositories();
             
-            // Form principal deve ser um singleton
+            // Form principal e userControls devem ser singleton
             Services.AddSingleton(typeof(Main));
 
-            // Demais forms devem ser transient
             Services.AddSingleton(typeof(ucClientes));
-            Services.AddSingleton(typeof(Forms.UserControls.Clientes.ucCadastro));
+            Services.AddSingleton(typeof(Forms.UserControls.Clientes.ucConsulta));
             Services.AddSingleton(typeof(ucFornecedores));
             Services.AddSingleton(typeof(ucItens));
             Services.AddSingleton(typeof(ucOperacoes));
+            
+            // Demais forms devem ser transient
             Services.AddTransient(typeof(About));
         }
     }
