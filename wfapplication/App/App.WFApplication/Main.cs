@@ -23,7 +23,6 @@ namespace App.WFApplication
             HideUserControls();
 
             _about = about;
-
         }
 
         #region Eventos

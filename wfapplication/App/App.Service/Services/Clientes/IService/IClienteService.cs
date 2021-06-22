@@ -7,7 +7,7 @@ namespace App.Service.Services.Clientes.IService
     public interface IClienteService
     {
         Task<IEnumerable<Cliente>> Get();
-
+        
         Task<Cliente> Get(uint Id);
 
         Task<int> Insert(Cliente Cliente);
