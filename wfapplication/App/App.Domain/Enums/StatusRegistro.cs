@@ -1,4 +1,4 @@
-﻿namespace App.Domain.Eums
+﻿namespace App.Domain.Enums
 {
     public enum StatusRegistro
     {

@@ -1,5 +1,5 @@
 ﻿using App.Domain.Base;
-using App.Domain.Eums;
+using App.Domain.Enums;
 using App.Repository.BaseContext.IRepository;
 using Dapper.Contrib.Extensions;
 using System;

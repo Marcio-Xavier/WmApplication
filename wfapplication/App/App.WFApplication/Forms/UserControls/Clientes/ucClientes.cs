@@ -1,4 +1,5 @@
 ﻿using App.Service.Services.Clientes.IService;
+using App.Service.Services.Contatos.IService;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,9 +8,9 @@ namespace App.WFApplication.Forms.UserControls.Clientes
 {
     public partial class ucClientes : UserControl
     {
-        public ucClientes(IClienteService clienteService)
+        public ucClientes(IClienteService clienteService, IContatoTipoService contatoTipoService)
         {
-            InitializeComponent(clienteService);
+            InitializeComponent(clienteService, contatoTipoService);
             HideUserControls();
             ucCadastro.Visible = true;
             SetMenuAtivo(btnCadastro);

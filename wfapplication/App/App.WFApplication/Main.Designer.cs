@@ -1,5 +1,6 @@
 ﻿
 using App.Service.Services.Clientes.IService;
+using App.Service.Services.Contatos.IService;
 
 namespace App.WFApplication
 {
@@ -29,7 +30,7 @@ namespace App.WFApplication
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(IClienteService clienteSerice)
+        private void InitializeComponent(IClienteService clienteSerice, IContatoTipoService contatoTipoService)
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlMenu = new System.Windows.Forms.Panel();
@@ -46,7 +47,7 @@ namespace App.WFApplication
             this.btnParametrizacoes = new System.Windows.Forms.Button();
             this.btnWhatsapp = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.ucClientes = new App.WFApplication.Forms.UserControls.Clientes.ucClientes(clienteSerice);
+            this.ucClientes = new App.WFApplication.Forms.UserControls.Clientes.ucClientes(clienteSerice, contatoTipoService);
             this.ucFornecedores = new App.WFApplication.Forms.UserControls.Fornecedores.ucFornecedores();
             this.ucItens = new App.WFApplication.Forms.UserControls.Itens.ucItens();
             this.ucOperacoes = new App.WFApplication.Forms.UserControls.Operacoes.ucOperacoes();

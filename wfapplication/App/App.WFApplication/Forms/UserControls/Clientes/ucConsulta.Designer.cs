@@ -103,6 +103,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // Id
             // 
             this.Id.DataPropertyName = "Id";
+            this.Id.FillWeight = 54.16244F;
             this.Id.HeaderText = "# ID";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
@@ -110,6 +111,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // Nome
             // 
             this.Nome.DataPropertyName = "Nome";
+            this.Nome.FillWeight = 54.16244F;
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
@@ -117,6 +119,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // Cpf
             // 
             this.Cpf.DataPropertyName = "Cpf";
+            this.Cpf.FillWeight = 54.16244F;
             this.Cpf.HeaderText = "CPF";
             this.Cpf.Name = "Cpf";
             this.Cpf.ReadOnly = true;
@@ -124,6 +127,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // DataRegistro
             // 
             this.DataRegistro.DataPropertyName = "DataRegistro";
+            this.DataRegistro.FillWeight = 54.16244F;
             this.DataRegistro.HeaderText = "Data Cadastro";
             this.DataRegistro.Name = "DataRegistro";
             this.DataRegistro.ReadOnly = true;
@@ -132,6 +136,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             // 
             this.StatusRegistroId.DataPropertyName = "StatusRegistroId";
             this.StatusRegistroId.FalseValue = "2";
+            this.StatusRegistroId.FillWeight = 54.16244F;
             this.StatusRegistroId.HeaderText = "Ativo?";
             this.StatusRegistroId.Name = "StatusRegistroId";
             this.StatusRegistroId.ReadOnly = true;

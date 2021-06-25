@@ -38,8 +38,10 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.tlpFormulario = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.grbDadosUsuario = new System.Windows.Forms.GroupBox();
             this.tlpFormulario.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
+            this.grbDadosUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNome
@@ -106,7 +108,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.txtCpf.Mask = "000,000,000,00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.PromptChar = ' ';
-            this.txtCpf.Size = new System.Drawing.Size(120, 26);
+            this.txtCpf.Size = new System.Drawing.Size(140, 26);
             this.txtCpf.TabIndex = 5;
             // 
             // tlpFormulario
@@ -118,13 +120,13 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.tlpFormulario.Controls.Add(this.txtNome, 1, 0);
             this.tlpFormulario.Controls.Add(this.lblCpf, 0, 1);
             this.tlpFormulario.Controls.Add(this.lblNome, 0, 0);
-            this.tlpFormulario.Location = new System.Drawing.Point(3, 3);
+            this.tlpFormulario.Location = new System.Drawing.Point(5, 21);
             this.tlpFormulario.Name = "tlpFormulario";
             this.tlpFormulario.RowCount = 2;
             this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpFormulario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpFormulario.Size = new System.Drawing.Size(1250, 64);
+            this.tlpFormulario.Size = new System.Drawing.Size(1239, 64);
             this.tlpFormulario.TabIndex = 6;
             // 
             // tlpBotoes
@@ -139,7 +141,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.tlpBotoes.Name = "tlpBotoes";
             this.tlpBotoes.RowCount = 1;
             this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tlpBotoes.Size = new System.Drawing.Size(183, 38);
             this.tlpBotoes.TabIndex = 6;
             // 
@@ -163,11 +165,22 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // grbDadosUsuario
+            // 
+            this.grbDadosUsuario.Controls.Add(this.tlpFormulario);
+            this.grbDadosUsuario.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.grbDadosUsuario.Location = new System.Drawing.Point(3, 3);
+            this.grbDadosUsuario.Name = "grbDadosUsuario";
+            this.grbDadosUsuario.Size = new System.Drawing.Size(1250, 91);
+            this.grbDadosUsuario.TabIndex = 7;
+            this.grbDadosUsuario.TabStop = false;
+            this.grbDadosUsuario.Text = "Dados do Usuário";
+            // 
             // ucCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tlpFormulario);
+            this.Controls.Add(this.grbDadosUsuario);
             this.Controls.Add(this.tlpBotoes);
             this.Name = "ucCadastro";
             this.Size = new System.Drawing.Size(1256, 609);
@@ -175,6 +188,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.tlpFormulario.ResumeLayout(false);
             this.tlpFormulario.PerformLayout();
             this.tlpBotoes.ResumeLayout(false);
+            this.grbDadosUsuario.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -189,5 +203,6 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         private System.Windows.Forms.TableLayoutPanel tlpFormulario;
         private System.Windows.Forms.TableLayoutPanel tlpBotoes;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.GroupBox grbDadosUsuario;
     }
 }

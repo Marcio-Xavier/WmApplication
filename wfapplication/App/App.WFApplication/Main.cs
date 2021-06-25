@@ -1,4 +1,5 @@
 ﻿using App.Service.Services.Clientes.IService;
+using App.Service.Services.Contatos.IService;
 using App.WFApplication.Forms.About;
 using App.WFApplication.Forms.UserControls.Clientes;
 using System;
@@ -12,11 +13,11 @@ namespace App.WFApplication
         private About _about;
         private IClienteService _clienteService;
 
-        public Main(About about, IClienteService clienteService)
+        public Main(About about, IClienteService clienteService, IContatoTipoService contatoTipoService)
         {
             _clienteService = clienteService;
 
-            InitializeComponent(clienteService);
+            InitializeComponent(clienteService, contatoTipoService);
 
             SetInfoVersao();
 

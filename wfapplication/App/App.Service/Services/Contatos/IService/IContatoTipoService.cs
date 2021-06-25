@@ -10,10 +10,8 @@ namespace App.Service.Services.Contatos.IService
 
         Task<ContatoTipo> Get(uint Id);
 
-        Task<uint> Insert(ContatoTipo ContatoTipo);
+        Task<int> Insert(ContatoTipo ContatoTipo);
 
         Task<bool> Update(ContatoTipo ContatoTipo);
-
-        Task<bool> Delete(uint Id);
     }
 }

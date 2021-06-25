@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Contatos\Service\" />
     <Folder Include="Services\Enderecos\Service\" />
     <Folder Include="Services\Operacoes\Service\" />
     <Folder Include="Services\Itens\Service\" />

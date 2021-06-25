@@ -1,6 +1,5 @@
 ﻿using App.Domain.Models.Clientes;
 using App.Service.Services.Clientes.IService;
-using App.Service.Services.Clientes.Service;
 using App.Utils.Helpers;
 using System;
 using System.Windows.Forms;
@@ -11,16 +10,38 @@ namespace App.WFApplication.Forms.UserControls.Clientes
     {
         private IClienteService _clienteService;
 
-        public ucCadastro()
+        public ucCadastro(IClienteService clienteService)
         {
+            _clienteService = clienteService;
             InitializeComponent();
         }
 
         #region Eventos
         private void ucCadastro_Load(object sender, EventArgs e)
         {
-            LimparCampos();
+            SetDefault();
         }
+
+        //private void btnAdicionarContato_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        ValidarContato(txtDescricaoContato.Text);
+        //        grvContatos.Rows.Add(cbxContatoTipo.DisplayMember, txtDescricaoContato.Text);
+        //    }
+        //    catch (FormatException ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Formato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (ArgumentException ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
@@ -49,6 +70,42 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         #endregion
 
         #region Métodos
+        private async void SetDefault()
+        {
+            LimparCampos();
+        }
+
+        //private void ValidarContato(string valor)
+        //{
+        //    if (valor.Trim() == string.Empty)
+        //    {
+        //        throw new ArgumentException("Campo 'Valor' deve estar preenchido");
+        //    }
+        //    switch (cbxContatoTipo.ValueMember.ToUInt32())
+        //    {
+        //        case (int)Domain.Enums.ContatoTipo.Celular:
+        //            valor.ValidarTelefoneCelular();
+        //            break;
+        //        case (int)Domain.Enums.ContatoTipo.Email:
+        //            valor.ValidarEmail();
+        //            break;
+        //        case (int)Domain.Enums.ContatoTipo.Instagram:
+        //            valor.ValidarUsuarioInstagramTwitter();
+        //            break;
+        //        case (int)Domain.Enums.ContatoTipo.Twitter:
+        //            valor.ValidarUsuarioInstagramTwitter();
+        //            break;
+        //        case (int)Domain.Enums.ContatoTipo.Telefone:
+        //            valor.ValidarTelefoneCelular();
+        //            break;
+        //        case (int)Domain.Enums.ContatoTipo.Site:
+        //            valor.ValidarUrl();
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //}
+
         private void LimparCampos()
         {
             txtNome.Text =

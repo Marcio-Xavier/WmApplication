@@ -1,4 +1,5 @@
 ﻿using App.Service.Services.Clientes.IService;
+using App.Service.Services.Contatos.IService;
 
 namespace App.WFApplication.Forms.UserControls.Clientes
 {
@@ -28,12 +29,12 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(IClienteService clienteService)
+        private void InitializeComponent(IClienteService clienteService, IContatoTipoService contatoTipoService)
         {
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.pnlSubMenuAtivo = new System.Windows.Forms.Panel();
-            this.ucCadastro = new App.WFApplication.Forms.UserControls.Clientes.ucCadastro();
+            this.ucCadastro = new App.WFApplication.Forms.UserControls.Clientes.ucCadastro(clienteService);
             this.ucConsulta = new App.WFApplication.Forms.UserControls.Clientes.ucConsulta(clienteService);
             this.SuspendLayout();
             // 
@@ -104,7 +105,6 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.Name = "ucClientes";
             this.Size = new System.Drawing.Size(1256, 657);
             this.ResumeLayout(false);
-
         }
 
         #endregion
