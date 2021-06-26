@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlSubMenuAtivo = new System.Windows.Forms.Panel();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.pnlSubMenuAtivo = new System.Windows.Forms.Panel();
+            this.ucCadastro = new App.WFApplication.Forms.UserControls.Clientes.ucCadastro(_clienteService);
+            this.ucConsulta = new App.WFApplication.Forms.UserControls.Clientes.ucConsulta(_clienteService);
             this.SuspendLayout();
-            // 
-            // pnlSubMenuAtivo
-            // 
-            this.pnlSubMenuAtivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.pnlSubMenuAtivo.Location = new System.Drawing.Point(3, 0);
-            this.pnlSubMenuAtivo.Name = "pnlSubMenuAtivo";
-            this.pnlSubMenuAtivo.Size = new System.Drawing.Size(77, 10);
-            this.pnlSubMenuAtivo.TabIndex = 3;
             // 
             // btnCadastro
             // 
@@ -75,6 +67,29 @@
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
+            // pnlSubMenuAtivo
+            // 
+            this.pnlSubMenuAtivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.pnlSubMenuAtivo.Location = new System.Drawing.Point(3, 0);
+            this.pnlSubMenuAtivo.Name = "pnlSubMenuAtivo";
+            this.pnlSubMenuAtivo.Size = new System.Drawing.Size(77, 10);
+            this.pnlSubMenuAtivo.TabIndex = 3;
+            // 
+            // ucCadastro
+            // 
+            this.ucCadastro.Location = new System.Drawing.Point(0, 48);
+            this.ucCadastro.Name = "ucCadastro";
+            this.ucCadastro.Size = new System.Drawing.Size(1256, 609);
+            this.ucCadastro.TabIndex = 4;
+            // 
+            // ucConsulta
+            // 
+            this.ucConsulta.Location = new System.Drawing.Point(0, 48);
+            this.ucConsulta.Name = "ucConsulta";
+            this.ucConsulta.Size = new System.Drawing.Size(1256, 609);
+            this.ucConsulta.TabIndex = 5;
+            this.ucConsulta.Visible = false;
+            // 
             // ucCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -93,7 +108,7 @@
         private System.Windows.Forms.Panel pnlSubMenuAtivo;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnConsulta;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private ucCadastro ucCadastro;
+        private ucConsulta ucConsulta;
     }
 }

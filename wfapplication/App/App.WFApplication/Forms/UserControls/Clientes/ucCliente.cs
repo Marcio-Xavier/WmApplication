@@ -10,29 +10,14 @@ namespace App.WFApplication.Forms.UserControls.Clientes
     {
         public IClienteService _clienteService;
         public IContatoTipoService _contatoTipoService;
-
         public ucCliente(IClienteService clienteService, IContatoTipoService contatoTipoService)
         {
             _clienteService = clienteService;
             _contatoTipoService = contatoTipoService;
             InitializeComponent();
             HideUserControls();
-            //ucCadastro.Visible = true;
+            ucCadastro.Visible = true;
             SetMenuAtivo(btnCadastro);
-        }
-
-        private void SetMenuAtivo(Button button)
-        {
-            pnlSubMenuAtivo.Location = new Point(
-                button.Location.X,
-                pnlSubMenuAtivo.Location.Y
-            );
-        }
-
-        private void HideUserControls()
-        {
-            // ucCadastro.Visible =
-            // ucConsulta.Visible = false;   
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
@@ -41,7 +26,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             {
                 HideUserControls();
                 SetMenuAtivo((Button)sender);
-                //ucCadastro.Visible = true;
+                ucCadastro.Visible = true;
             }
             catch (Exception ex)
             {
@@ -55,12 +40,26 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             {
                 HideUserControls();
                 SetMenuAtivo((Button)sender);
-                //ucConsulta.Visible = true;
+                ucConsulta.Visible = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void SetMenuAtivo(Button button)
+        {
+            pnlSubMenuAtivo.Location = new Point(
+                button.Location.X,
+                pnlSubMenuAtivo.Location.Y
+            );
+        }
+
+        private void HideUserControls()
+        {
+            ucCadastro.Visible =
+            ucConsulta.Visible = false;
         }
     }
 }
