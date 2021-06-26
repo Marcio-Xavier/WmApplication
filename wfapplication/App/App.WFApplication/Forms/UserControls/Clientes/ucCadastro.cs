@@ -1,4 +1,5 @@
-﻿using App.Domain.Models.Clientes;
+﻿using App.Domain.Enums;
+using App.Domain.Models.Clientes;
 using App.Service.Services.Clientes.IService;
 using App.Utils.Helpers;
 using System;
@@ -55,12 +56,13 @@ namespace App.WFApplication.Forms.UserControls.Clientes
                 var cliente = new Cliente
                 {
                     Nome = txtNome.Text,
+                    StatusRegistroId = (int)StatusRegistro.Ativo,
                     Cpf = txtCpf.Text.OnlyNumbers()
                 };
 
                 var clienteId = await _clienteService.Insert(cliente);
 
-                MessageBox.Show($"Cliente #{clienteId} inserido com suecesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Cliente {cliente.Nome} inserido com suecesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
