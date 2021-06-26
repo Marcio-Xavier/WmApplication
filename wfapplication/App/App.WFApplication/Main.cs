@@ -11,13 +11,15 @@ namespace App.WFApplication
     public partial class Main : Form
     {
         private About _about;
-        private IClienteService _clienteService;
+        public IClienteService _clienteService;
+        public IContatoTipoService _contatoTipoService;
 
         public Main(About about, IClienteService clienteService, IContatoTipoService contatoTipoService)
         {
             _clienteService = clienteService;
+            _contatoTipoService = contatoTipoService;
 
-            InitializeComponent(clienteService, contatoTipoService);
+            InitializeComponent();
 
             SetInfoVersao();
 
@@ -32,7 +34,7 @@ namespace App.WFApplication
             try
             {
                 HideUserControls();
-                ucClientes.Visible = true;
+                ucCliente.Visible = true;
                 SetMenuAtivo((Button)sender);
             }
             catch (Exception ex)
@@ -142,7 +144,7 @@ namespace App.WFApplication
 
         private void HideUserControls()
         {
-            ucClientes.Visible =
+            ucCliente.Visible =
             ucFornecedores.Visible =
             ucItens.Visible =
             ucOperacoes.Visible =

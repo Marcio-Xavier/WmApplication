@@ -43,7 +43,7 @@ namespace App.WFApplication
             // Form principal e userControls devem ser singleton
             Services.AddSingleton(typeof(Main));
 
-            Services.AddSingleton(typeof(ucClientes));
+            Services.AddSingleton(typeof(ucCliente));
             Services.AddSingleton(typeof(Forms.UserControls.Clientes.ucConsulta));
             Services.AddSingleton(typeof(ucFornecedores));
             Services.AddSingleton(typeof(ucItens));

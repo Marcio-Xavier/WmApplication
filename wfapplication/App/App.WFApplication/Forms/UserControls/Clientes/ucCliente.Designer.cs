@@ -1,9 +1,6 @@
-﻿using App.Service.Services.Clientes.IService;
-using App.Service.Services.Contatos.IService;
-
-namespace App.WFApplication.Forms.UserControls.Clientes
+﻿namespace App.WFApplication.Forms.UserControls.Clientes
 {
-    partial class ucClientes
+    partial class ucCliente
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,14 +26,22 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(IClienteService clienteService, IContatoTipoService contatoTipoService)
+        private void InitializeComponent()
         {
+            this.pnlSubMenuAtivo = new System.Windows.Forms.Panel();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
-            this.pnlSubMenuAtivo = new System.Windows.Forms.Panel();
-            this.ucCadastro = new App.WFApplication.Forms.UserControls.Clientes.ucCadastro(clienteService);
-            this.ucConsulta = new App.WFApplication.Forms.UserControls.Clientes.ucConsulta(clienteService);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
+            // 
+            // pnlSubMenuAtivo
+            // 
+            this.pnlSubMenuAtivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.pnlSubMenuAtivo.Location = new System.Drawing.Point(3, 0);
+            this.pnlSubMenuAtivo.Name = "pnlSubMenuAtivo";
+            this.pnlSubMenuAtivo.Size = new System.Drawing.Size(77, 10);
+            this.pnlSubMenuAtivo.TabIndex = 3;
             // 
             // btnCadastro
             // 
@@ -70,49 +75,25 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
-            // pnlSubMenuAtivo
-            // 
-            this.pnlSubMenuAtivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.pnlSubMenuAtivo.Location = new System.Drawing.Point(3, 0);
-            this.pnlSubMenuAtivo.Name = "pnlSubMenuAtivo";
-            this.pnlSubMenuAtivo.Size = new System.Drawing.Size(77, 10);
-            this.pnlSubMenuAtivo.TabIndex = 3;
-            // 
-            // ucCadastro
-            // 
-            this.ucCadastro.Location = new System.Drawing.Point(0, 48);
-            this.ucCadastro.Name = "ucCadastro";
-            this.ucCadastro.Size = new System.Drawing.Size(1256, 609);
-            this.ucCadastro.TabIndex = 4;
-            // 
-            // ucConsulta
-            // 
-            this.ucConsulta.Location = new System.Drawing.Point(0, 48);
-            this.ucConsulta.Name = "ucConsulta";
-            this.ucConsulta.Size = new System.Drawing.Size(1256, 609);
-            this.ucConsulta.TabIndex = 5;
-            this.ucConsulta.Visible = false;
-            // 
-            // ucClientes
+            // ucCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ucConsulta);
-            this.Controls.Add(this.ucCadastro);
-            this.Controls.Add(this.pnlSubMenuAtivo);
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.btnCadastro);
-            this.Name = "ucClientes";
+            this.Controls.Add(this.pnlSubMenuAtivo);
+            this.Name = "ucCliente";
             this.Size = new System.Drawing.Size(1256, 657);
             this.ResumeLayout(false);
+
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel pnlSubMenuAtivo;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnConsulta;
-        private System.Windows.Forms.Panel pnlSubMenuAtivo;
-        private ucCadastro ucCadastro;
-        private ucConsulta ucConsulta;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }

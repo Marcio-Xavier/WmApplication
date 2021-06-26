@@ -7,7 +7,7 @@
     <Compile Update="Forms\UserControls\Clientes\ucCadastro.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Forms\UserControls\Clientes\ucClientes.cs">
+    <Compile Update="Forms\UserControls\Clientes\ucCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Forms\UserControls\Clientes\ucConsulta.cs">

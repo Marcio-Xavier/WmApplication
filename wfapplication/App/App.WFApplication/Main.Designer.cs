@@ -30,7 +30,7 @@ namespace App.WFApplication
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(IClienteService clienteSerice, IContatoTipoService contatoTipoService)
+        private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlMenu = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@ namespace App.WFApplication
             this.btnParametrizacoes = new System.Windows.Forms.Button();
             this.btnWhatsapp = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.ucClientes = new App.WFApplication.Forms.UserControls.Clientes.ucClientes(clienteSerice, contatoTipoService);
+            this.ucCliente = new App.WFApplication.Forms.UserControls.Clientes.ucCliente(_clienteService, _contatoTipoService);
             this.ucFornecedores = new App.WFApplication.Forms.UserControls.Fornecedores.ucFornecedores();
             this.ucItens = new App.WFApplication.Forms.UserControls.Itens.ucItens();
             this.ucOperacoes = new App.WFApplication.Forms.UserControls.Operacoes.ucOperacoes();
@@ -256,13 +256,13 @@ namespace App.WFApplication
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // ucClientes
+            // ucCliente
             // 
-            this.ucClientes.Location = new System.Drawing.Point(200, 119);
-            this.ucClientes.Name = "ucClientes";
-            this.ucClientes.Size = new System.Drawing.Size(1256, 657);
-            this.ucClientes.TabIndex = 7;
-            this.ucClientes.Visible = false;
+            this.ucCliente.Location = new System.Drawing.Point(200, 119);
+            this.ucCliente.Name = "ucClientes";
+            this.ucCliente.Size = new System.Drawing.Size(1256, 657);
+            this.ucCliente.TabIndex = 7;
+            this.ucCliente.Visible = false;
             // 
             // ucFornecedores
             // 
@@ -305,7 +305,7 @@ namespace App.WFApplication
             this.Controls.Add(this.ucOperacoes);
             this.Controls.Add(this.ucItens);
             this.Controls.Add(this.ucFornecedores);
-            this.Controls.Add(this.ucClientes);
+            this.Controls.Add(this.ucCliente);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnWhatsapp);
             this.Controls.Add(this.btnParametrizacoes);
@@ -342,7 +342,7 @@ namespace App.WFApplication
         private System.Windows.Forms.Button btnParametrizacoes;
         private System.Windows.Forms.Button btnWhatsapp;
         private System.Windows.Forms.Button btnFechar;
-        private Forms.UserControls.Clientes.ucClientes ucClientes;
+        private Forms.UserControls.Clientes.ucCliente ucCliente;
         private Forms.UserControls.Fornecedores.ucFornecedores ucFornecedores;
         private Forms.UserControls.Itens.ucItens ucItens;
         private Forms.UserControls.Operacoes.ucOperacoes ucOperacoes;

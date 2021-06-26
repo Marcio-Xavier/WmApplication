@@ -53,7 +53,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.txtNome.Location = new System.Drawing.Point(57, 3);
             this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(518, 26);
+            this.txtNome.Size = new System.Drawing.Size(482, 26);
             this.txtNome.TabIndex = 0;
             // 
             // lblNome
