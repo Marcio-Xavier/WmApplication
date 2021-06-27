@@ -16,7 +16,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             _contatoTipoService = contatoTipoService;
             InitializeComponent();
             HideUserControls();
-            ucCadastro.Visible = true;
+            //ucCadastro.Visible = true;
             SetMenuAtivo(btnCadastro);
         }
 
@@ -26,7 +26,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             {
                 HideUserControls();
                 SetMenuAtivo((Button)sender);
-                ucCadastro.Visible = true;
+                //ucCadastro.Visible = true;
             }
             catch (Exception ex)
             {
@@ -40,7 +40,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             {
                 HideUserControls();
                 SetMenuAtivo((Button)sender);
-                ucConsulta.Visible = true;
+                //ucConsulta.Visible = true;
             }
             catch (Exception ex)
             {
@@ -58,8 +58,8 @@ namespace App.WFApplication.Forms.UserControls.Clientes
 
         private void HideUserControls()
         {
-            ucCadastro.Visible =
-            ucConsulta.Visible = false;
+            //ucCadastro.Visible =
+            //ucConsulta.Visible = false;
         }
     }
 }

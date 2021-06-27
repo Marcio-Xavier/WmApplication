@@ -30,86 +30,30 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCadastro));
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblCpf = new System.Windows.Forms.Label();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.grbDadosUsuario = new System.Windows.Forms.GroupBox();
             this.tlpFormulario = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblCpf = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.tlpBotoes = new System.Windows.Forms.TableLayoutPanel();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.grbDadosUsuario = new System.Windows.Forms.GroupBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.grbDadosUsuario.SuspendLayout();
             this.tlpFormulario.SuspendLayout();
             this.tlpBotoes.SuspendLayout();
-            this.grbDadosUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtNome
+            // grbDadosUsuario
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtNome.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.txtNome.Location = new System.Drawing.Point(57, 3);
-            this.txtNome.MaxLength = 50;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(482, 26);
-            this.txtNome.TabIndex = 0;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.lblNome.Location = new System.Drawing.Point(3, 0);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(48, 18);
-            this.lblNome.TabIndex = 2;
-            this.lblNome.Text = "Nome";
-            // 
-            // lblCpf
-            // 
-            this.lblCpf.AutoSize = true;
-            this.lblCpf.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.lblCpf.Location = new System.Drawing.Point(3, 32);
-            this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(34, 18);
-            this.lblCpf.TabIndex = 3;
-            this.lblCpf.Text = "CPF";
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(115)))));
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(95, 3);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(83, 32);
-            this.btnSalvar.TabIndex = 4;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCpf.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.txtCpf.Location = new System.Drawing.Point(57, 35);
-            this.txtCpf.Mask = "000,000,000,00";
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.PromptChar = ' ';
-            this.txtCpf.Size = new System.Drawing.Size(140, 26);
-            this.txtCpf.TabIndex = 5;
+            this.grbDadosUsuario.Controls.Add(this.tlpFormulario);
+            this.grbDadosUsuario.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.grbDadosUsuario.Location = new System.Drawing.Point(3, 3);
+            this.grbDadosUsuario.Name = "grbDadosUsuario";
+            this.grbDadosUsuario.Size = new System.Drawing.Size(1250, 91);
+            this.grbDadosUsuario.TabIndex = 8;
+            this.grbDadosUsuario.TabStop = false;
+            this.grbDadosUsuario.Text = "Dados do Usuário";
             // 
             // tlpFormulario
             // 
@@ -129,6 +73,53 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.tlpFormulario.Size = new System.Drawing.Size(1239, 64);
             this.tlpFormulario.TabIndex = 6;
             // 
+            // txtCpf
+            // 
+            this.txtCpf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtCpf.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.txtCpf.Location = new System.Drawing.Point(57, 35);
+            this.txtCpf.Mask = "000,000,000,00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.PromptChar = ' ';
+            this.txtCpf.Size = new System.Drawing.Size(140, 26);
+            this.txtCpf.TabIndex = 5;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNome.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.txtNome.Location = new System.Drawing.Point(57, 3);
+            this.txtNome.MaxLength = 50;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(482, 26);
+            this.txtNome.TabIndex = 0;
+            // 
+            // lblCpf
+            // 
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.lblCpf.Location = new System.Drawing.Point(3, 32);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(34, 18);
+            this.lblCpf.TabIndex = 3;
+            this.lblCpf.Text = "CPF";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
+            this.lblNome.Location = new System.Drawing.Point(3, 0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(48, 18);
+            this.lblNome.TabIndex = 2;
+            this.lblNome.Text = "Nome";
+            // 
             // tlpBotoes
             // 
             this.tlpBotoes.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -143,7 +134,7 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpBotoes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tlpBotoes.Size = new System.Drawing.Size(183, 38);
-            this.tlpBotoes.TabIndex = 6;
+            this.tlpBotoes.TabIndex = 9;
             // 
             // btnLimpar
             // 
@@ -163,46 +154,52 @@ namespace App.WFApplication.Forms.UserControls.Clientes
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // grbDadosUsuario
+            // btnSalvar
             // 
-            this.grbDadosUsuario.Controls.Add(this.tlpFormulario);
-            this.grbDadosUsuario.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.grbDadosUsuario.Location = new System.Drawing.Point(3, 3);
-            this.grbDadosUsuario.Name = "grbDadosUsuario";
-            this.grbDadosUsuario.Size = new System.Drawing.Size(1250, 91);
-            this.grbDadosUsuario.TabIndex = 7;
-            this.grbDadosUsuario.TabStop = false;
-            this.grbDadosUsuario.Text = "Dados do Usuário";
+            this.btnSalvar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(191)))), ((int)(((byte)(115)))));
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(95, 3);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(83, 32);
+            this.btnSalvar.TabIndex = 4;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // ucCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grbDadosUsuario);
             this.Controls.Add(this.tlpBotoes);
+            this.Controls.Add(this.grbDadosUsuario);
             this.Name = "ucCadastro";
             this.Size = new System.Drawing.Size(1256, 609);
-            this.Load += new System.EventHandler(this.ucCadastro_Load);
+            this.grbDadosUsuario.ResumeLayout(false);
             this.tlpFormulario.ResumeLayout(false);
             this.tlpFormulario.PerformLayout();
             this.tlpBotoes.ResumeLayout(false);
-            this.grbDadosUsuario.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblCpf;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.GroupBox grbDadosUsuario;
         private System.Windows.Forms.TableLayoutPanel tlpFormulario;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblCpf;
+        private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TableLayoutPanel tlpBotoes;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.GroupBox grbDadosUsuario;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

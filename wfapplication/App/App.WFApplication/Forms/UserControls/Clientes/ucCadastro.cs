@@ -3,6 +3,13 @@ using App.Domain.Models.Clientes;
 using App.Service.Services.Clientes.IService;
 using App.Utils.Helpers;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App.WFApplication.Forms.UserControls.Clientes
@@ -18,32 +25,6 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         }
 
         #region Eventos
-        private void ucCadastro_Load(object sender, EventArgs e)
-        {
-            SetDefault();
-        }
-
-        //private void btnAdicionarContato_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        ValidarContato(txtDescricaoContato.Text);
-        //        grvContatos.Rows.Add(cbxContatoTipo.DisplayMember, txtDescricaoContato.Text);
-        //    }
-        //    catch (FormatException ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Formato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (ArgumentException ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             LimparCampos();
@@ -72,10 +53,34 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         #endregion
 
         #region Métodos
-        private async void SetDefault()
+        private void LimparCampos()
         {
-            LimparCampos();
+            txtNome.Text =
+            txtCpf.Text = string.Empty;
         }
+
+        #endregion
+
+        //private void btnAdicionarContato_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        ValidarContato(txtDescricaoContato.Text);
+        //        grvContatos.Rows.Add(cbxContatoTipo.DisplayMember, txtDescricaoContato.Text);
+        //    }
+        //    catch (FormatException ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Formato Inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (ArgumentException ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         //private void ValidarContato(string valor)
         //{
@@ -107,12 +112,5 @@ namespace App.WFApplication.Forms.UserControls.Clientes
         //            break;
         //    }
         //}
-
-        private void LimparCampos()
-        {
-            txtNome.Text =
-            txtCpf.Text = string.Empty;
-        }
-        #endregion
     }
 }

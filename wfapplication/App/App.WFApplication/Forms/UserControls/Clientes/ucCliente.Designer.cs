@@ -31,8 +31,6 @@
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.pnlSubMenuAtivo = new System.Windows.Forms.Panel();
-            this.ucCadastro = new App.WFApplication.Forms.UserControls.Clientes.ucCadastro(_clienteService);
-            this.ucConsulta = new App.WFApplication.Forms.UserControls.Clientes.ucConsulta(_clienteService);
             this.SuspendLayout();
             // 
             // btnCadastro
@@ -75,21 +73,6 @@
             this.pnlSubMenuAtivo.Size = new System.Drawing.Size(77, 10);
             this.pnlSubMenuAtivo.TabIndex = 3;
             // 
-            // ucCadastro
-            // 
-            this.ucCadastro.Location = new System.Drawing.Point(0, 48);
-            this.ucCadastro.Name = "ucCadastro";
-            this.ucCadastro.Size = new System.Drawing.Size(1256, 609);
-            this.ucCadastro.TabIndex = 4;
-            // 
-            // ucConsulta
-            // 
-            this.ucConsulta.Location = new System.Drawing.Point(0, 48);
-            this.ucConsulta.Name = "ucConsulta";
-            this.ucConsulta.Size = new System.Drawing.Size(1256, 609);
-            this.ucConsulta.TabIndex = 5;
-            this.ucConsulta.Visible = false;
-            // 
             // ucCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -100,7 +83,6 @@
             this.Name = "ucCliente";
             this.Size = new System.Drawing.Size(1256, 657);
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -108,7 +90,5 @@
         private System.Windows.Forms.Panel pnlSubMenuAtivo;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnConsulta;
-        private ucCadastro ucCadastro;
-        private ucConsulta ucConsulta;
     }
 }
